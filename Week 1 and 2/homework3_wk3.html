@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Homework: Prompt Engineering Practice | AI Whisperer Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f0568',
+                        primary: '#ff6600',
+                        secondary: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-dark text-white py-6 px-4 shadow-lg">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="week3.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span>Back to Week 3</span>
+                </a>
+            </div>
+            <div class="bg-primary/20 px-3 py-1 rounded-full">
+                <span class="text-primary text-sm font-semibold">Homework</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Strategic Quote Banner -->
+    <div class="bg-gradient-to-r from-secondary to-dark text-white py-6 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <blockquote class="text-lg md:text-xl font-light italic">
+                "Practice doesn't make perfect. Perfect practice makes perfect. Each prompt you refine sharpens your AI mastery."
+            </blockquote>
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto py-8 px-4">
+        <!-- Assignment Header -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="bg-primary/10 p-4 rounded-xl">
+                    <i data-lucide="edit-3" class="w-10 h-10 text-primary"></i>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold text-dark mb-2">Prompt Engineering Practice</h1>
+                    <p class="text-gray-600">Week 3 Homework Assignment</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                    <i data-lucide="clock" class="w-6 h-6 text-primary mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-500">Estimated Time</p>
+                    <p class="font-bold text-dark">1.5 - 2 hours</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                    <i data-lucide="calendar" class="w-6 h-6 text-primary mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-500">Due Date</p>
+                    <p class="font-bold text-dark">Before Week 4</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                    <i data-lucide="award" class="w-6 h-6 text-primary mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-500">Total Points</p>
+                    <p class="font-bold text-dark">100 Points</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <div class="flex items-start gap-3">
+                    <i data-lucide="info" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5"></i>
+                    <div>
+                        <p class="text-blue-800 font-semibold mb-1">Assignment Overview</p>
+                        <p class="text-blue-700 text-sm">This homework reinforces your RCTFC prompt engineering skills through real-world practice. You'll create prompts for business and personal scenarios, compare AI responses, and begin building your permanent prompt library.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tasks -->
+        <div class="space-y-6">
+            <!-- Task 1 -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h2 class="text-xl font-bold text-dark">Business Prompt Challenge</h2>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">25 Points</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Create a complete RCTFC prompt for a <strong>business scenario</strong> relevant to your work or entrepreneurial goals.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <h3 class="font-semibold text-dark mb-2">Requirements:</h3>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Clearly label each RCTFC component (Role, Context, Task, Format, Constraints)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Test on <strong>at least 2 different AI platforms</strong> (ChatGPT, Claude, or Perplexity)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Include screenshots of both AI responses</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Write a 2-3 sentence comparison of which AI performed better and why</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                            <p class="text-sm text-yellow-800"><strong>💡 Scenario Ideas:</strong> Marketing copy, customer email response, product description, meeting agenda, project proposal, social media content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 2 -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h2 class="text-xl font-bold text-dark">Personal Life Prompt Challenge</h2>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">25 Points</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Create a complete RCTFC prompt for a <strong>personal life scenario</strong>—something that helps you outside of work.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <h3 class="font-semibold text-dark mb-2">Requirements:</h3>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Clearly label each RCTFC component</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Incorporate your <strong>OCEAN personality insights</strong> from Week 1 into the prompt context</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Test on your preferred AI platform</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Include screenshot and explain how your OCEAN profile influenced the prompt</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                            <p class="text-sm text-yellow-800"><strong>💡 Scenario Ideas:</strong> Meal planning, fitness advice, learning roadmap, home organization, travel planning, habit building, relationship communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 3 -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h2 class="text-xl font-bold text-dark">Prompt Iteration Exercise</h2>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">25 Points</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Take one of your prompts from Task 1 or 2 and iterate on it <strong>at least 3 times</strong> to improve the result.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <h3 class="font-semibold text-dark mb-2">Document Your Journey:</h3>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Version 1:</strong> Your original prompt + AI response</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Version 2:</strong> First refinement + what you changed and why</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Version 3:</strong> Second refinement + what you changed and why</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Final Version:</strong> Your best prompt + final AI response</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-secondary/5 border border-secondary/20 rounded-lg p-3">
+                            <p class="text-sm text-dark"><strong>🎯 Goal:</strong> Show how small changes in prompts lead to significantly different (and better) outputs. This is the core skill of prompt engineering!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 4 -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h2 class="text-xl font-bold text-dark">Start Your Prompt Library</h2>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">25 Points</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Create a personal prompt library document with <strong>at least 5 reusable prompts</strong> organized by category.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <h3 class="font-semibold text-dark mb-2">Library Requirements:</h3>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="folder" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>Organize prompts by category (Business, Personal, Research, Creative, etc.)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="tag" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>For each prompt, include: Name, Category, The Prompt, Best AI to Use, Notes</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="star" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>At least 2 prompts for business use</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="heart" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>At least 2 prompts for personal use</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="search" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                                    <span>At least 1 prompt for research/learning</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-4 border border-primary/20">
+                            <p class="text-sm font-semibold text-dark mb-2">📚 Example Library Entry:</p>
+                            <div class="bg-white rounded-lg p-3 text-sm">
+                                <p><strong>Name:</strong> Email Response Generator</p>
+                                <p><strong>Category:</strong> Business Communication</p>
+                                <p><strong>Prompt:</strong> "You are a professional business communicator. I received this email: [paste email]. Write a polite, professional response that [goal]. Keep it under 150 words and maintain a [tone] tone."</p>
+                                <p><strong>Best AI:</strong> Claude (nuanced, professional tone)</p>
+                                <p><strong>Notes:</strong> Works great for customer complaints</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submission Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mt-8">
+            <h2 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+                <i data-lucide="upload-cloud" class="w-7 h-7 text-primary"></i>
+                Submission
+            </h2>
+            
+            <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                <h3 class="font-semibold text-dark mb-3">Submit the following:</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5 text-primary"></i>
+                        <span>A single document (PDF, Word, or Google Doc) containing all 4 tasks</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="image" class="w-5 h-5 text-primary"></i>
+                        <span>Screenshots embedded in the document (or attached separately)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-primary"></i>
+                        <span>Your Prompt Library (can be in the same doc or a separate file)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Upload Area -->
+            <div class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-primary transition-colors">
+                <i data-lucide="upload" class="w-12 h-12 text-gray-400 mx-auto mb-4"></i>
+                <p class="text-gray-600 mb-2">Drag and drop your files here, or</p>
+                <label class="inline-block bg-primary text-white px-6 py-2 rounded-lg cursor-pointer hover:bg-primary/90 transition-colors">
+                    <input type="file" class="hidden" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+                    Browse Files
+                </label>
+                <p class="text-xs text-gray-400 mt-4">Accepted: PDF, DOC, DOCX, PNG, JPG (Max 25MB total)</p>
+            </div>
+        </div>
+
+        <!-- Grading Rubric -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mt-8">
+            <h2 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+                <i data-lucide="clipboard-check" class="w-7 h-7 text-primary"></i>
+                Grading Rubric
+            </h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="text-left py-3 px-4 text-dark font-semibold">Criteria</th>
+                            <th class="text-center py-3 px-4 text-dark font-semibold">Excellent (100%)</th>
+                            <th class="text-center py-3 px-4 text-dark font-semibold">Good (75%)</th>
+                            <th class="text-center py-3 px-4 text-dark font-semibold">Needs Work (50%)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600">
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-medium text-dark">RCTFC Framework</td>
+                            <td class="py-3 px-4 text-center">All 5 components clearly labeled and effective</td>
+                            <td class="py-3 px-4 text-center">4 components present and labeled</td>
+                            <td class="py-3 px-4 text-center">Missing components or unclear</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-medium text-dark">AI Comparison</td>
+                            <td class="py-3 px-4 text-center">Thoughtful analysis of differences</td>
+                            <td class="py-3 px-4 text-center">Basic comparison provided</td>
+                            <td class="py-3 px-4 text-center">Missing or superficial</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-medium text-dark">Iteration Quality</td>
+                            <td class="py-3 px-4 text-center">Clear improvement with each version</td>
+                            <td class="py-3 px-4 text-center">Some improvement shown</td>
+                            <td class="py-3 px-4 text-center">Minimal refinement</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-medium text-dark">Prompt Library</td>
+                            <td class="py-3 px-4 text-center">5+ organized, reusable prompts</td>
+                            <td class="py-3 px-4 text-center">3-4 prompts, basic organization</td>
+                            <td class="py-3 px-4 text-center">Fewer than 3 or poorly organized</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 px-4 mt-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-400">AI Whisperer Professional Course | Powered by Senseii Games</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

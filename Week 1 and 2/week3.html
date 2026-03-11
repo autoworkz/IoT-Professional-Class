@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: Prompt Engineering Mastery | AI Whisperer Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f0568',
+                        primary: '#ff6600',
+                        secondary: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-dark text-white py-6 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span>Back to Course</span>
+                </a>
+            </div>
+            <div class="text-right">
+                <p class="text-sm text-gray-300">Week 3 of 8</p>
+                <p class="text-xs text-gray-400">~1.5 hours in-class</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Strategic Quote Banner -->
+    <div class="bg-gradient-to-r from-secondary to-dark text-white py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <i data-lucide="quote" class="w-10 h-10 mx-auto mb-4 text-primary"></i>
+            <blockquote class="text-xl md:text-2xl font-light italic mb-4">
+                "The quality of your AI output is directly proportional to the quality of your input. Master the prompt, master the result."
+            </blockquote>
+            <p class="text-primary font-semibold">— Strategic Takeaway</p>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto py-8 px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Lesson Header -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="bg-primary/10 p-4 rounded-xl">
+                            <i data-lucide="message-square-text" class="w-10 h-10 text-primary"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold text-dark mb-2">Prompt Engineering Mastery</h1>
+                            <p class="text-gray-600 text-lg">Learn to speak AI's language and get exactly what you need</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 border-l-4 border-primary">
+                        <h3 class="font-semibold text-dark mb-2">This Week's Mission</h3>
+                        <p class="text-gray-700">Transform from AI user to AI whisperer. You'll learn the frameworks and techniques that turn vague requests into precise, powerful prompts that deliver consistent results across ChatGPT, Claude, and Perplexity.</p>
+                    </div>
+                </div>
+
+                <!-- Core Concepts -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+                        <i data-lucide="lightbulb" class="w-7 h-7 text-primary"></i>
+                        Core Concepts
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Concept 1 -->
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h3 class="font-bold text-dark text-lg">The Anatomy of a Perfect Prompt</h3>
+                            <p class="text-gray-600 mt-1">Every effective prompt has 5 components: <strong>Role</strong>, <strong>Context</strong>, <strong>Task</strong>, <strong>Format</strong>, and <strong>Constraints</strong>. We call this the RCTFC Framework.</p>
+                        </div>
+                        
+                        <!-- Concept 2 -->
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Iteration is Key</h3>
+                            <p class="text-gray-600 mt-1">Great prompts rarely happen on the first try. Learn to refine, adjust, and build on AI responses to get closer to your goal with each exchange.</p>
+                        </div>
+                        
+                        <!-- Concept 3 -->
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Context is Queen</h3>
+                            <p class="text-gray-600 mt-1">The more relevant context you provide, the better your results. Your OCEAN profile from Week 1 is context. Your business goals are context. Your constraints are context.</p>
+                        </div>
+                        
+                        <!-- Concept 4 -->
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Different AIs, Different Strengths</h3>
+                            <p class="text-gray-600 mt-1"><strong>ChatGPT</strong>: Creative writing, brainstorming, general tasks. <strong>Claude</strong>: Analysis, nuanced reasoning, longer context. <strong>Perplexity</strong>: Research, current events, cited sources.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In-Class Activities -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-dark flex items-center gap-3">
+                            <i data-lucide="clipboard-list" class="w-7 h-7 text-primary"></i>
+                            In-Class Activities
+                        </h2>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500">Progress:</span>
+                            <div class="relative w-12 h-12">
+                                <svg class="w-12 h-12 transform -rotate-90">
+                                    <circle cx="24" cy="24" r="20" stroke="#e5e7eb" stroke-width="4" fill="none"/>
+                                    <circle id="progress-ring" cx="24" cy="24" r="20" stroke="#ff6600" stroke-width="4" fill="none"
+                                        stroke-dasharray="125.6" stroke-dashoffset="125.6" stroke-linecap="round"/>
+                                </svg>
+                                <span id="progress-text" class="absolute inset-0 flex items-center justify-center text-xs font-bold text-dark">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Activity 1 -->
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="1">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 1</span>
+                                        <span class="text-gray-400 text-sm">~20 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">The RCTFC Framework Demo</h3>
+                                    <p class="text-gray-600 mt-1">Watch instructor demonstrate transforming a vague prompt into a powerful one using Role, Context, Task, Format, and Constraints. Take notes on the before/after.</p>
+                                    <div class="mt-3 bg-white rounded-lg p-4 border">
+                                        <p class="text-sm text-gray-500 mb-2"><strong>Example Transformation:</strong></p>
+                                        <p class="text-sm text-red-600 line-through mb-1">❌ "Write me a marketing email"</p>
+                                        <p class="text-sm text-green-600">✅ "You are a conversion copywriter (Role). I run a small bakery targeting busy professionals (Context). Write a promotional email for our new lunch delivery service (Task). Use a friendly tone, keep it under 150 words, include a call-to-action button text (Format). Don't mention competitors or use the word 'delicious' (Constraints)."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 2 -->
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="2">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 2</span>
+                                        <span class="text-gray-400 text-sm">~30 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">Prompt Engineering Lab</h3>
+                                    <p class="text-gray-600 mt-1">Using your problem from the Senseii Games challenge (Week 2), craft a RCTFC prompt. Test it on all three platforms:</p>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        <a href="https://chat.openai.com" target="_blank" class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-3 py-2 rounded-lg hover:bg-green-200 transition-colors">
+                                            <i data-lucide="bot" class="w-4 h-4"></i>
+                                            ChatGPT
+                                        </a>
+                                        <a href="https://claude.ai" target="_blank" class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-3 py-2 rounded-lg hover:bg-orange-200 transition-colors">
+                                            <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                            Claude
+                                        </a>
+                                        <a href="https://perplexity.ai" target="_blank" class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-2 rounded-lg hover:bg-blue-200 transition-colors">
+                                            <i data-lucide="search" class="w-4 h-4"></i>
+                                            Perplexity
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 3 -->
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 3</span>
+                                        <span class="text-gray-400 text-sm">~25 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">Compare & Refine</h3>
+                                    <p class="text-gray-600 mt-1">Analyze the three responses. Which AI gave the best answer for your specific need? Refine your prompt based on what you learned and run it again. Share your best result with the class.</p>
+                                    <div class="mt-3 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                                        <p class="text-sm text-yellow-800"><strong>💡 Pro Tip:</strong> Your OCEAN profile affects how you communicate. High Openness? You might prefer creative prompts. High Conscientiousness? You'll want structured outputs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 4 -->
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="4">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 4</span>
+                                        <span class="text-gray-400 text-sm">~15 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">Build Your Prompt Library</h3>
+                                    <p class="text-gray-600 mt-1">Start a personal "Prompt Library" document. Save your best prompts with notes on what worked. This becomes your AI toolkit for life and business.</p>
+                                    <div class="mt-3 bg-secondary/5 rounded-lg p-4 border border-secondary/20">
+                                        <p class="text-sm font-semibold text-dark mb-2">Template Starters:</p>
+                                        <ul class="text-sm text-gray-600 space-y-1">
+                                            <li>• Business: "You are a [role] helping a [business type]..."</li>
+                                            <li>• Personal: "Act as my personal [coach/advisor/assistant]..."</li>
+                                            <li>• Research: "Find and summarize [topic] with sources..."</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coding Tool Spotlight -->
+                <div class="bg-gradient-to-r from-dark to-secondary rounded-2xl shadow-lg p-8 text-white">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="code-2" class="w-8 h-8 text-primary"></i>
+                        <h2 class="text-xl font-bold">Coding Tool Spotlight: Meet Your Helpers</h2>
+                    </div>
+                    <p class="text-gray-300 mb-4">Throughout this course, we'll introduce AI coding assistants that make technical tasks approachable—even if you've never written code. This week's preview:</p>
+                    <div class="bg-white/10 rounded-xl p-4">
+                        <h3 class="font-bold text-primary mb-2">🛠️ OpenCode & Claude Code</h3>
+                        <p class="text-sm text-gray-200">These tools can help you automate repetitive tasks, build simple apps, and even create custom AI workflows. You don't need to be a programmer—just know how to describe what you want (that's prompt engineering!). We'll dive deeper in Weeks 4-6.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Learning Outcomes -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i data-lucide="target" class="w-5 h-5 text-primary"></i>
+                        Learning Outcomes
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Apply the RCTFC Framework to any prompt</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Choose the right AI for different task types</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Iterate and refine prompts effectively</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Start a personal prompt library</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Connect prompt style to OCEAN personality</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i data-lucide="link" class="w-5 h-5 text-primary"></i>
+                        Week 3 Materials
+                    </h3>
+                    <div class="space-y-2">
+                        <a href="homework3_wk3.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+                            <i data-lucide="file-text" class="w-5 h-5 text-gray-400 group-hover:text-primary"></i>
+                            <span class="text-gray-700 group-hover:text-dark">Homework Assignment</span>
+                        </a>
+                        <a href="quiz3.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+<i data-lucide="help-circle" class="w-5 h-5 text-gray-400 group-hover:text-primary"></i>
+                            <span class="text-gray-700 group-hover:text-dark">Week 3 Quiz</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reminder Card -->
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 border border-primary/20">
+                    <h3 class="font-bold text-dark mb-3 flex items-center gap-2">
+                        <i data-lucide="bell" class="w-5 h-5 text-primary"></i>
+                        Before Next Week
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Complete the homework assignment
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Take the Week 3 Quiz
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Identify a business problem for Week 4
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 px-4 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">AI Whisperer Professional Course | Powered by Senseii Games</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Progress tracking
+        const checkboxes = document.querySelectorAll('.activity-checkbox');
+        const progressRing = document.getElementById('progress-ring');
+        const progressText = document.getElementById('progress-text');
+        const circumference = 125.6;
+        const storageKey = 'week3_progress';
+
+        // Load saved progress
+        function loadProgress() {
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                const completed = JSON.parse(saved);
+                checkboxes.forEach(cb => {
+                    if (completed.includes(cb.dataset.activity)) {
+                        cb.checked = true;
+                        cb.parentElement.classList.add('bg-primary', 'border-primary');
+                        cb.parentElement.querySelector('.check-icon').classList.remove('hidden');
+                    }
+                });
+                updateProgress();
+            }
+        }
+
+        // Save progress
+        function saveProgress() {
+            const completed = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) completed.push(cb.dataset.activity);
+            });
+            localStorage.setItem(storageKey, JSON.stringify(completed));
+        }
+
+        // Update progress display
+        function updateProgress() {
+            const total = checkboxes.length;
+            const completed = document.querySelectorAll('.activity-checkbox:checked').length;
+            const percent = Math.round((completed / total) * 100);
+            const offset = circumference - (percent / 100) * circumference;
+            
+            progressRing.style.strokeDashoffset = offset;
+            progressText.textContent = percent + '%';
+        }
+
+        // Checkbox event handlers
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', function() {
+                const label = this.parentElement;
+                const checkIcon = label.querySelector('.check-icon');
+                
+                if (this.checked) {
+                    label.classList.add('bg-primary', 'border-primary');
+                    checkIcon.classList.remove('hidden');
+                } else {
+                    label.classList.remove('bg-primary', 'border-primary');
+                    checkIcon.classList.add('hidden');
+                }
+                
+                saveProgress();
+                updateProgress();
+            });
+        });
+
+        // Initialize
+        loadProgress();
+    </script>
+</body>
+</html>

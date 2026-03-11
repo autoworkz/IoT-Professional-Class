@@ -1,0 +1,80 @@
+[
+  {
+    "query": "3d isometric icon of business data strategy document, blue and orange color scheme, high quality, transparent background",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/1351881158/vector/project-task-management-and-effective-time-planning-tools-project-development-icon-3d-vector.jpg?s=612x612&w=0&k=20&c=4WiIdOjNFAi8ZhOxSu1QQICvBC9lN0DU6hF93lSjlnw=",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 27733,
+      "width": 612,
+      "height": 612,
+      "total_pixels": 374544,
+      "basic_score": 0.8111875677118482,
+      "file_name": "3d-business-strategy-data-document-icon.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 96.0,
+      "explanation": "The image is an excellent match for the search query and prompt. It features a professional 3D isometric design of a business document with data visualization (upward arrow/chart), a target representing strategy, and a notification bell. The quality is high, and there are no watermarks. While the prompt mentioned a blue and orange scheme, the red and gold accents work well with the primary blue base.",
+      "file_name": "3d-business-strategy-data-document-icon.jpg",
+      "caption": "A high-quality 3D isometric icon featuring a blue clipboard with a data growth chart, a red bullseye target with two arrows, and a golden notification bell, representing business strategy and performance tracking.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "3d isometric icon of business data strategy document, blue and orange color scheme, high quality, transparent background",
+    "image_info": {
+      "url": "https://img.freepik.com/premium-vector/business-plan-icon-3d-illustration-from-business-plan-collection-creative-business-plan-3d-icon-web-design-templates-infographics-more_676904-320.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 17969,
+      "width": 626,
+      "height": 626,
+      "total_pixels": 391876,
+      "basic_score": 0.815403662909545,
+      "file_name": "3d-business-strategy-document-icon.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 75.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 82.0,
+      "explanation": "The image accurately depicts a 3D business document (clipboard with checklist) and a briefcase, fitting the general search query. However, it deviates from the specific prompt requirements: it is not truly isometric (more of a 3D frontal view), the color scheme is brown and teal rather than blue and orange, and the background is white instead of transparent.",
+      "file_name": "3d-business-strategy-document-icon.jpg",
+      "caption": "A high-quality 3D icon set featuring a brown leather briefcase in front of a clipboard with a checklist and a yellow pencil, designed with soft shadows on a white background.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "3d isometric icon of business data strategy document, blue and orange color scheme, high quality, transparent background",
+    "image_info": {
+      "url": "https://static.vecteezy.com/system/resources/thumbnails/022/234/223/small/flat-3d-isometric-design-concept-of-online-analytics-data-analysis-financial-reporteting-research-business-strategy-free-vector.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 15470,
+      "width": 424,
+      "height": 350,
+      "total_pixels": 148400,
+      "basic_score": 0.7201633331147158,
+      "file_name": "isometric_business_data_strategy_icon.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 50.0,
+      "watermark_score": 100.0,
+      "overall_score": 70.0,
+      "explanation": "The image is a perfect conceptual match for the search query and prompt, featuring detailed isometric business data elements and the requested color scheme. However, the clarity is poor due to low resolution in the provided sample, and it lacks the requested transparent background (it has a white background).",
+      "file_name": "isometric_business_data_strategy_icon.jpg",
+      "caption": "A 3D isometric illustration of a laptop displaying business data analytics with various charts, graphs, and icons in a blue and orange color palette.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]

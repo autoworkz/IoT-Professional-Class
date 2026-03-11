@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiz | Automation Workz</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f0568', // Dark Blue
+                            card: '#0f0568', // Medium Blue with opacity
+                            primary: '#ff6600', // Orange
+                            secondary: '#220bb1', // Medium Blue
+                            accent: '#ff6600', // Orange
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+    .explanation {
+        display: none;
+    }
+    .correct-answer {
+        border-color: #22c55e !important; /* Green */
+        background-color: rgba(34, 197, 94, 0.1);
+    }
+    .incorrect-answer {
+        border-color: #ef4444 !important; /* Red */
+        background-color: rgba(239, 68, 68, 0.1);
+    }
+</style>
+</head>
+<body class="bg-white text-white antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden">
+<!-- Progress Bar (Fixed) -->
+<div class="fixed top-0 left-0 w-full h-1 z-50 bg-brand-dark/50">
+<div class="h-full bg-gradient-to-r from-brand-secondary to-brand-primary w-0 transition-all duration-500 ease-out shadow-[0_0_10px_rgba(124,58,237,0.5)]" id="quiz-progress-bar"></div>
+</div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-40 bg-brand-dark/80 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2 group cursor-pointer" onclick="window.location.href='index.html'">
+<img alt="Automation Workz Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" src="images/logo.png"/>
+<span class="font-bold text-xl tracking-tight text-white group-hover:text-brand-secondary transition-colors">Automation Workz</span>
+</div>
+<div class="hidden md:flex items-center gap-6 text-sm font-medium">
+<span class="text-blue-200">IT Professional Class 2026</span>
+<div class="h-4 w-[1px] bg-slate-700"></div>
+<a href="homework.html" class="text-blue-200 hover:text-white transition-colors">Homework</a>
+<div class="h-4 w-[1px] bg-slate-700"></div>
+<span class="text-brand-accent">Quiz</span>
+</div>
+<button class="md:hidden p-2 text-blue-200 hover:text-white">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+<!-- Background Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/90 to-brand-dark z-10"></div>
+<img alt="Background" class="w-full h-full object-cover opacity-60 animate-pulse-slow" src="images/hero-bg.png"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm font-medium mb-6 animate-fade-in-up">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+</span>
+                Quiz Active
+            </div>
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 animate-fade-in-up delay-100 leading-tight">
+                Quiz: Week 1 — <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary">Data, AI & You</span>
+</h1>
+<p class="text-xl text-brand-primary font-medium mb-6 animate-fade-in-up delay-150">
+                Data as the New Gold & AI as the Data Specialist
+            </p>
+<p class="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto mb-10 animate-fade-in-up delay-200">
+                Total Points: 100 | Select the best answer for each question
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+<a class="px-8 py-4 bg-brand-dark/50 text-white font-bold rounded-xl border border-white/20 hover:bg-brand-dark transition-all transform hover:scale-105 flex items-center justify-center gap-2" href="homework.html">
+<i class="w-4 h-4" data-lucide="arrow-left"></i>
+                    Back to Homework
+</a>
+</div>
+</div>
+</header>
+<main class="relative z-10 pb-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Strategic Takeaway -->
+<div class="mb-20 animate-on-scroll">
+<div class="bg-gradient-to-r from-brand-secondary/30 to-brand-dark border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden group hover:border-brand-primary/30 transition-colors flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1 relative z-10">
+<h3 class="text-brand-primary font-semibold uppercase tracking-wider text-sm mb-3">Strategic Takeaway</h3>
+<blockquote class="text-2xl md:text-3xl font-medium text-white leading-relaxed font-serif italic">
+                            "Small businesses that win are not the ones with the most technology, but the ones who ask <span class="text-brand-primary border-b-2 border-brand-primary/30">better questions</span> of their data."
+                        </blockquote>
+</div>
+<div class="w-full md:w-1/3 relative">
+<div class="absolute inset-0 bg-brand-primary/20 blur-2xl rounded-full"></div>
+<img alt="Strategic Insight" class="relative z-10 rounded-xl shadow-lg border border-white/10 transform group-hover:scale-105 transition-transform duration-500" src="images/feature-img.png"/>
+</div>
+</div>
+</div>
+
+
+<div class="grid lg:grid-cols-3 gap-12">
+<!-- Left Column: Quiz Questions -->
+<div class="lg:col-span-2 space-y-8" id="quiz-form">
+    
+    <!-- Question 1 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="1">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q1.</span> What is the primary purpose of data in a business context?</h3>
+        <div class="space-y-3">
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q1" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">To replace leadership judgment entirely</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q1" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">To store information for compliance only</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q1" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">To support informed decision-making and strategy</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q1" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">To increase the volume of reports produced</span>
+            </label>
+        </div>
+        <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> Data's true value lies in improving decision quality—helping leaders reduce guesswork and align strategy with evidence.
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="2">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q2.</span> Which type of data focuses on how people think, act, and interact in a business environment?</h3>
+        <div class="space-y-3">
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q2" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Financial data</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q2" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Operational data</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q2" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Behavioral data</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q2" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Inventory data</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> Behavioral data captures patterns in human behavior, which directly influence leadership, teamwork, and customer engagement.
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="3">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q3.</span> Why do many small businesses struggle to make data-driven decisions?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q3" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Data is unavailable</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q3" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Decisions are often based on intuition rather than structured data</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q3" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">AI is only for large corporations</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q3" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Data eliminates creativity</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> Most small businesses rely heavily on experience and instinct, missing opportunities to validate decisions with data.
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="4">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q4.</span> What role does Artificial Intelligence (AI) primarily play in business intelligence?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q4" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Collecting raw data manually</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q4" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Analyzing data patterns and generating insights</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q4" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Making final decisions without human input</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q4" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Replacing business strategy</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> AI enhances human decision-making by identifying patterns and insights that may not be immediately visible.
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="5">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q5.</span> How can AI and IoT work together in a business setting?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q5" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">IoT replaces AI in decision-making</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q5" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">IoT collects data while AI analyzes and interprets it</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q5" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">AI gathers physical sensor data without devices</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q5" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">They are unrelated technologies</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> IoT gathers real-time data from systems and people, while AI converts that data into actionable intelligence.
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="6">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q6.</span> What is the Big 5 (OCEAN) personality assessment primarily used for in business?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q6" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Diagnosing mental health conditions</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q6" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Understanding behavioral tendencies that affect work and leadership</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q6" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Measuring job performance directly</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q6" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Predicting revenue</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> The Big 5 framework helps organizations understand how personality influences leadership style, communication, and decision-making.
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="7">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q7.</span> Which personality trait is most closely associated with organization, reliability, and follow-through?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q7" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Openness</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q7" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Conscientiousness</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q7" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Extraversion</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q7" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Neuroticism</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> Conscientiousness reflects structure, discipline, and dependability—key traits in execution and operations.
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="8">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q8.</span> How can personality data improve business outcomes?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q8" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">By labeling employees</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q8" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">By aligning people with roles, teams, and leadership styles</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q8" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">By eliminating human judgment</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q8" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">By replacing performance reviews</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> When used ethically, personality data helps place people where they perform best and collaborate more effectively.
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="9">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q9.</span> Which statement best describes data-driven leadership?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q9" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Decisions are made solely by algorithms</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q9" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Data replaces experience</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q9" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Data informs decisions alongside experience and judgment</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q9" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Data is only reviewed after decisions are made</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> Strong leaders balance insight from data with experience—not one or the other.
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-brand-card border border-white/10 rounded-xl p-6 transition-all hover:border-brand-secondary/50 question-card" data-question="10">
+        <h3 class="text-lg font-bold text-white mb-4"><span class="text-brand-primary mr-2">Q10.</span> What is the biggest business risk of ignoring behavioral and personality data?</h3>
+        <div class="space-y-3">
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q10" value="A" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Higher technology costs</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q10" value="B" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Poor team alignment, turnover, and ineffective leadership decisions</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q10" value="C" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Slower internet speeds</span>
+            </label>
+             <label class="flex items-center gap-3 p-3 rounded-lg border border-white/5 hover:bg-white/5 cursor-pointer transition-colors option-label">
+                <input type="radio" name="q10" value="D" class="w-5 h-5 text-brand-primary bg-transparent border-slate-500 focus:ring-brand-primary">
+                <span class="text-slate-200 text-sm">Reduced automation</span>
+            </label>
+        </div>
+         <div class="explanation mt-4 p-4 bg-brand-secondary/20 rounded-lg border border-brand-secondary/30 text-sm text-blue-100">
+            <strong>Explanation:</strong> Ignoring human data leads to misalignment, disengagement, and costly people-related decisions.
+        </div>
+    </div>
+
+    <!-- Submit & Reset Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+        <button id="submit-quiz-btn" class="px-8 py-4 bg-brand-primary text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 transition-all transform hover:scale-105 flex items-center justify-center gap-3 text-lg">
+            Submit Quiz
+            <i class="w-5 h-5" data-lucide="check-circle"></i>
+        </button>
+        <button id="reset-quiz-btn" class="hidden px-8 py-4 bg-slate-600 text-white font-bold rounded-xl shadow-lg hover:bg-slate-500 transition-all transform hover:scale-105 flex items-center justify-center gap-3 text-lg">
+            Try Again
+            <i class="w-5 h-5" data-lucide="refresh-cw"></i>
+        </button>
+    </div>
+
+</div>
+
+<!-- Right Column: Learning Outcomes / Progress (Sticky) -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 space-y-8">
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-secondary to-brand-primary"></div>
+<h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+<i class="w-5 h-5 text-brand-accent" data-lucide="target"></i>
+                                Quiz Progress
+                            </h2>
+<div class="mt-8 pt-6 border-t border-white/10">
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="transform -rotate-90 w-12 h-12">
+<circle class="text-slate-700" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-brand-primary transition-all duration-1000 ease-out" cx="24" cy="24" fill="transparent" id="quiz-status-circle" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="125.6" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-bold text-white" id="quiz-score-percent">0%</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-medium text-white" id="quiz-status-text">Not Submitted</div>
+<div class="text-xs text-blue-300" id="quiz-points-text">0 / 100 Points</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Need Help Card -->
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+<div class="flex items-center gap-3 mb-2">
+<i class="w-5 h-5 text-blue-200" data-lucide="help-circle"></i>
+<h3 class="font-semibold text-white">Need Assistance?</h3>
+</div>
+<p class="text-sm text-blue-300 mb-4">Contact your instructor or the support team if you have trouble accessing SenseiiWyze.</p>
+<div class="mt-4 mb-4 p-3 bg-brand-primary/10 rounded-lg border border-brand-primary/20">
+<p class="text-white font-medium text-sm">Miranda Boyd</p>
+<a class="text-brand-primary text-sm hover:underline flex items-center gap-2 mt-1" href="mailto:miranda@autoworkz.org">
+<i class="w-3 h-3" data-lucide="mail"></i>
+                                miranda@autoworkz.org
+                            </a>
+</div>
+<button class="w-full py-2 px-4 bg-brand-dark/50 hover:bg-slate-700 text-slate-300 rounded-lg text-sm font-medium transition-colors">
+                                Contact Support
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-brand-dark border-t border-white/10 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<i class="w-5 h-5 text-blue-300" data-lucide="cpu"></i>
+<span class="text-blue-300 font-medium">Automation Workz © 2026</span>
+</div>
+<div class="flex gap-6 text-blue-300 text-sm">
+<a class="hover:text-brand-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-brand-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-brand-primary transition-colors" href="#">Learning Portal</a>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script src="js/quiz.js"></script>
+<script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

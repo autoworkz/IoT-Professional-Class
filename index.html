@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Professional Class | Automation Workz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#333144',
+                        primary: '#ff6600',
+                        secondary: '#019e7c',
+                        purple: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .week-card {
+            transition: all 0.3s ease;
+        }
+        .week-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-dark text-white py-6 px-6 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="https://learn.autoworkz.org/wp-content/uploads/2026/02/logo.png" alt="Automation Workz" class="h-12 w-auto">
+                <div>
+                    <h1 class="text-xl font-bold">IoT Professional Class</h1>
+                    <p class="text-sm text-gray-300">Automation Workz</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-dark to-purple text-white py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Course Materials</h2>
+            <p class="text-lg text-gray-300">Access all class activities, homework, and quizzes for each week</p>
+        </div>
+    </section>
+
+    <!-- Weeks Grid -->
+    <main class="max-w-6xl mx-auto py-12 px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Week 1 -->
+            <a href="week1.html" class="week-card bg-white rounded-2xl shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">Week 1</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Data, AI & You</h3>
+                    <p class="text-gray-600 text-sm">Personal Data Exploration for Business Intelligence</p>
+                </div>
+            </a>
+
+            <!-- Week 2 -->
+            <a href="week2.html" class="week-card bg-white rounded-2xl shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">Week 2</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Senseii Games Challenge</h3>
+                    <p class="text-gray-600 text-sm">Problem-Solving & Resilience through Gamification</p>
+                </div>
+            </a>
+
+            <!-- Week 3 -->
+            <a href="week3.html" class="week-card bg-white rounded-2xl shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold">Week 3</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Prompt Engineering Mastery</h3>
+                    <p class="text-gray-600 text-sm">Learn to speak AI's language and get exactly what you need</p>
+                </div>
+            </a>
+
+            <!-- Week 4 -->
+            <a href="week4.html" class="week-card bg-white rounded-2xl shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-purple/10 text-purple px-3 py-1 rounded-full text-sm font-semibold">Week 4</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">AI for Business Goals</h3>
+                    <p class="text-gray-600 text-sm">Solving Real Business Problems with AI</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 px-6 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">IoT Professional Class | Automation Workz</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

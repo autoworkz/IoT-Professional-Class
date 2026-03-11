@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Week 2: Senseii Games Challenge | Automation Workz</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f0568', // Dark Blue
+                            card: '#0f0568', // Medium Blue with opacity
+                            primary: '#ff6600', // Orange
+                            secondary: '#220bb1', // Medium Blue
+                            accent: '#ff6600', // Orange
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-white antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden">
+<!-- Progress Bar (Fixed) -->
+<div class="fixed top-0 left-0 w-full h-1 z-50 bg-brand-dark/50">
+<div class="h-full bg-gradient-to-r from-brand-secondary to-brand-primary w-0 transition-all duration-500 ease-out shadow-[0_0_10px_rgba(124,58,237,0.5)]" id="progress-bar"></div>
+</div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-40 bg-brand-dark/80 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2 group cursor-pointer" onclick="window.location.href='index.html'">
+<img alt="Automation Workz Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" src="images/logo.png"/>
+<span class="font-bold text-xl tracking-tight text-white group-hover:text-brand-secondary transition-colors">Automation Workz</span>
+</div>
+<div class="hidden md:flex items-center gap-6 text-sm font-medium">
+<span class="text-blue-200">IoT Professional Class</span>
+<div class="h-4 w-[1px] bg-slate-700"></div>
+<span class="text-brand-accent">Week 2</span>
+</div>
+<button class="md:hidden p-2 text-blue-200 hover:text-white">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+<!-- Background Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/90 to-brand-dark z-10"></div>
+<img alt="Background" class="w-full h-full object-cover opacity-60 animate-pulse-slow" src="images/hero-bg.png"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm font-medium mb-6 animate-fade-in-up">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+</span>
+                Week 2 Active
+            </div>
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 animate-fade-in-up delay-100 leading-tight">
+                Week 2: <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary">Senseii Games Challenge</span>
+</h1>
+<p class="text-xl md:text-2xl text-brand-primary font-medium mb-6 animate-fade-in-up delay-150">
+                Mastering Problem Solving through Gamification
+            </p>
+<p class="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto mb-10 animate-fade-in-up delay-200">
+                Sharpen your problem-solving skills and resilience by navigating through complex maze levels. Learn to adapt and overcome challenges in a gamified environment.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+<a class="px-8 py-4 bg-white text-brand-dark font-bold rounded-xl hover:bg-slate-200 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.1)] flex items-center justify-center gap-2" href="#activity-steps">
+                    Start Activity
+                    <i class="w-4 h-4" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+</header>
+<main class="relative z-10 pb-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Strategic Takeaway -->
+<div class="mb-20 animate-on-scroll">
+<div class="bg-gradient-to-r from-brand-secondary/30 to-brand-dark border border-white/10 rounded-2xl p-8 md:p-10 relative overflow-hidden group hover:border-brand-primary/30 transition-colors flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1 relative z-10">
+<h3 class="text-brand-primary font-semibold uppercase tracking-wider text-sm mb-3">Strategic Takeaway</h3>
+<blockquote class="text-2xl md:text-3xl font-medium text-white leading-relaxed font-serif italic">
+                            "The quality of your <span class="text-brand-primary border-b-2 border-brand-primary/30">output</span> is determined by the quality of your <span class="text-brand-primary border-b-2 border-brand-primary/30">input</span>. Treat AI as a partner, not a search engine."
+                        </blockquote>
+</div>
+<div class="w-full md:w-1/3 relative">
+<div class="absolute inset-0 bg-brand-primary/20 blur-2xl rounded-full"></div>
+<img alt="Strategic Insight" class="relative z-10 rounded-xl shadow-lg border border-white/10 transform group-hover:scale-105 transition-transform duration-500" src="images/feature-img.png"/>
+</div>
+</div>
+</div>
+<div class="grid lg:grid-cols-3 gap-12">
+<!-- Left Column: Activity List -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Activity Steps Section -->
+<section class="animate-on-scroll" id="activity-steps">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold text-brand-dark flex items-start gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary text-white text-sm mt-1">1</span>
+<div>
+                                    In-Class Activity<br/>
+                                    Steps
+                                </div>
+</h2>
+<span class="text-sm text-brand-dark" id="progress-text">0/3 Completed</span>
+</div>
+<div class="space-y-4">
+<!-- Step 1: Access -->
+<div class="bg-brand-card border border-white/10 rounded-xl p-1 transition-all hover:border-brand-secondary/50 group step-card" data-step="1">
+<label class="flex items-start gap-4 p-5 cursor-pointer relative z-10">
+<input class="step-checkbox w-6 h-6 rounded border-slate-600 text-brand-primary focus:ring-brand-primary bg-brand-dark/50 mt-1 transition-all" onchange="updateProgress()" type="checkbox"/>
+<div class="flex-1">
+<h3 class="text-lg font-semibold text-white group-hover:text-brand-secondary transition-colors">Access Senseii Games</h3>
+<div class="text-blue-200 mt-1 text-sm mb-2">Go to the game platform to start your challenge.</div>
+<a class="inline-flex items-center gap-2 text-brand-primary hover:text-white transition-colors text-sm font-medium" href="https://www.senseiigames.com/" target="_blank">
+                                            Open Senseii Games <i class="w-4 h-4" data-lucide="external-link"></i>
+</a>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-1/2 -translate-y-1/2">
+<i class="w-6 h-6 text-brand-secondary" data-lucide="arrow-right-circle"></i>
+</div>
+</label>
+</div>
+<!-- Step 2: Complete Levels -->
+<div class="bg-brand-card border border-white/10 rounded-xl p-1 transition-all hover:border-brand-secondary/50 group step-card" data-step="2">
+<label class="flex items-start gap-4 p-5 cursor-pointer relative z-10">
+<input class="step-checkbox w-6 h-6 rounded border-slate-600 text-brand-primary focus:ring-brand-primary bg-brand-dark/50 mt-1 transition-all" onchange="updateProgress()" type="checkbox"/>
+<div class="flex-1">
+<h3 class="text-lg font-semibold text-white group-hover:text-brand-secondary transition-colors">Complete Maze Levels 1–5</h3>
+<p class="text-blue-200 mt-1 text-sm">Work through each maze level to build problem-solving skills and resilience.</p>
+</div>
+</label>
+</div>
+<!-- Step 3: Track Progress -->
+<div class="bg-brand-card border border-white/10 rounded-xl p-1 transition-all hover:border-brand-secondary/50 group step-card" data-step="3">
+<label class="flex items-start gap-4 p-5 cursor-pointer relative z-10">
+<input class="step-checkbox w-6 h-6 rounded border-slate-600 text-brand-primary focus:ring-brand-primary bg-brand-dark/50 mt-1 transition-all" onchange="updateProgress()" type="checkbox"/>
+<div class="flex-1">
+<h3 class="text-lg font-semibold text-white group-hover:text-brand-secondary transition-colors">Track Your Progress</h3>
+<p class="text-blue-200 mt-1 text-sm">Note your completion of each level as you master the game mechanics.</p>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Video Section -->
+<div class="mt-8 animate-on-scroll">
+<div class="mx-auto bg-brand-card border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+<div class="p-4 border-b border-white/10 bg-brand-dark/50 flex items-center justify-between">
+<h3 class="font-semibold text-white flex items-center gap-2">
+<i class="w-5 h-5 text-brand-primary" data-lucide="play-circle"></i>
+                            Watch: Senseii Games Walkthrough
+                        </h3>
+</div>
+<div class="relative pb-[56.25%] h-0 bg-black">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute top-0 left-0 w-full h-full" frameborder="0" src="https://www.youtube.com/embed/9AsqmGTAxmY" title="Senseii Games Walkthrough"></iframe>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Learning Outcomes (Sticky) -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 space-y-8">
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-secondary to-brand-primary"></div>
+<h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+<i class="w-5 h-5 text-brand-accent" data-lucide="target"></i>
+                                Learning Outcomes
+                            </h2>
+<div class="space-y-4">
+<!-- Outcome 1 -->
+<div class="flex gap-4 p-3 rounded-lg hover:bg-brand-dark/50/50 transition-colors">
+<div class="mt-1">
+<i class="w-5 h-5 text-brand-secondary" data-lucide="check-circle-2"></i>
+</div>
+<div class="text-sm text-slate-300">
+                                        Understand the importance of <span class="text-white font-medium">prompt precision</span>.
+                                    </div>
+</div>
+<!-- Outcome 2 -->
+<div class="flex gap-4 p-3 rounded-lg hover:bg-brand-dark/50/50 transition-colors">
+<div class="mt-1">
+<i class="w-5 h-5 text-brand-primary" data-lucide="brain-circuit"></i>
+</div>
+<div class="text-sm text-slate-300">
+                                        Learn to <span class="text-white font-medium">iterate and refine</span> your approach based on feedback.
+                                    </div>
+</div>
+<!-- Outcome 3 -->
+<div class="flex gap-4 p-3 rounded-lg hover:bg-brand-dark/50/50 transition-colors">
+<div class="mt-1">
+<i class="w-5 h-5 text-blue-400" data-lucide="bar-chart-3"></i>
+</div>
+<div class="text-sm text-slate-300">
+                                        Apply structured thinking to <span class="text-white font-medium">solve complex problems</span>.
+                                    </div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/10">
+<p class="text-xs text-blue-300 uppercase tracking-wider font-semibold mb-3">Status</p>
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="transform -rotate-90 w-12 h-12">
+<circle class="text-slate-700" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-brand-primary transition-all duration-1000 ease-out" cx="24" cy="24" fill="transparent" id="status-circle" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="125.6" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-bold text-white" id="status-percent">0%</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-medium text-white" id="completion-label">Activity Incomplete - Finish all 3 steps</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Need Help Card -->
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+<div class="flex items-center gap-3 mb-2">
+<i class="w-5 h-5 text-blue-200" data-lucide="help-circle"></i>
+<h3 class="font-semibold text-white">Need Assistance?</h3>
+</div>
+<p class="text-sm text-blue-300 mb-4">Contact your instructor or the support team if you have trouble accessing Senseii Games.</p>
+<div class="mt-4 mb-4 p-3 bg-brand-primary/10 rounded-lg border border-brand-primary/20">
+<p class="text-white font-medium text-sm">Miranda Boyd</p>
+<a class="text-brand-primary text-sm hover:underline flex items-center gap-2 mt-1" href="mailto:miranda@autoworkz.org">
+<i class="w-3 h-3" data-lucide="mail"></i>
+                                miranda@autoworkz.org
+                            </a>
+</div>
+<button class="w-full py-2 px-4 bg-brand-dark/50 hover:bg-slate-700 text-slate-300 rounded-lg text-sm font-medium transition-colors">
+                                Contact Support
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-brand-dark border-t border-white/10 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<i class="w-5 h-5 text-blue-300" data-lucide="cpu"></i>
+<span class="text-blue-300 font-medium">Automation Workz © 2026</span>
+</div>
+<div class="flex gap-6 text-blue-300 text-sm">
+<a class="hover:text-brand-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-brand-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-brand-primary transition-colors" href="#">Learning Portal</a>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script src="js/week2.js"></script>
+<script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
