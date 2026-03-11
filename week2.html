@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Senseii Games Challenge | IoT Professional Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f0568',
+                        primary: '#ff6600',
+                        secondary: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-dark text-white py-6 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span>Back to Course</span>
+                </a>
+            </div>
+            <div class="text-right">
+                <p class="text-sm text-gray-300">Week 2 of 8</p>
+                <p class="text-xs text-gray-400">~45 min in-class</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-gradient-to-r from-secondary to-dark text-white py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <i data-lucide="quote" class="w-10 h-10 mx-auto mb-4 text-primary"></i>
+            <blockquote class="text-xl md:text-2xl font-light italic mb-4">
+                "The quality of your output is determined by the quality of your input. Treat AI as a partner, not a search engine."
+            </blockquote>
+            <p class="text-primary font-semibold">— Strategic Takeaway</p>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto py-8 px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="bg-primary/10 p-4 rounded-xl">
+                            <i data-lucide="gamepad-2" class="w-10 h-10 text-primary"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold text-dark mb-2">Senseii Games Challenge</h1>
+                            <p class="text-gray-600 text-lg">Mastering Problem Solving through Gamification</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 border-l-4 border-primary">
+                        <h3 class="font-semibold text-dark mb-2">This Week's Mission</h3>
+                        <p class="text-gray-700">Sharpen your problem-solving skills and resilience by navigating through complex maze levels. Learn to adapt and overcome challenges in a gamified environment.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+                        <i data-lucide="lightbulb" class="w-7 h-7 text-primary"></i>
+                        Core Concepts
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Prompt Precision</h3>
+                            <p class="text-gray-600 mt-1">Just like navigating a maze requires precision, communicating with AI requires clear, specific instructions. Vague inputs lead to vague outputs.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Iteration & Refinement</h3>
+                            <p class="text-gray-600 mt-1">When you hit a dead end, you try a different path. The same applies to AI—iterate on your prompts based on the feedback you receive.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Structured Thinking</h3>
+                            <p class="text-gray-600 mt-1">Complex problems require breaking them into smaller steps. Learn to approach challenges methodically rather than randomly.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-bold text-dark text-lg">Building Resilience</h3>
+                            <p class="text-gray-600 mt-1">Failure is part of the learning process. Each dead end teaches you something valuable for the next attempt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-dark flex items-center gap-3">
+                            <i data-lucide="clipboard-list" class="w-7 h-7 text-primary"></i>
+                            In-Class Activities
+                        </h2>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500">Progress:</span>
+                            <div class="relative w-12 h-12">
+                                <svg class="w-12 h-12 transform -rotate-90">
+                                    <circle cx="24" cy="24" r="20" stroke="#e5e7eb" stroke-width="4" fill="none"/>
+                                    <circle id="progress-ring" cx="24" cy="24" r="20" stroke="#ff6600" stroke-width="4" fill="none"
+                                        stroke-dasharray="125.6" stroke-dashoffset="125.6" stroke-linecap="round"/>
+                                </svg>
+                                <span id="progress-text" class="absolute inset-0 flex items-center justify-center text-xs font-bold text-dark">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="1">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 1</span>
+                                        <span class="text-gray-400 text-sm">~5 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">Access Senseii Games</h3>
+                                    <p class="text-gray-600 mt-1">Go to senseiigames.com, create an account or log in, and familiarize yourself with the interface.</p>
+                                    <a href="https://www.senseiigames.com/" target="_blank" class="inline-flex items-center gap-2 mt-3 text-primary hover:text-secondary transition-colors font-medium">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        Open Senseii Games
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="2">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 2</span>
+                                        <span class="text-gray-400 text-sm">~30 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">Complete Maze Levels 1-5</h3>
+                                    <p class="text-gray-600 mt-1">Work through each maze level sequentially. Pay attention to patterns and dead ends. Build problem-solving skills and resilience.</p>
+                                    <div class="mt-3 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                                        <p class="text-sm text-yellow-800"><strong>💡 Tip:</strong> Note your strategies for each level. What works? What doesn't? These observations will help you in the homework challenges.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item bg-gray-50 rounded-xl p-5 border-2 border-transparent hover:border-primary/20 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <label class="flex items-center justify-center w-8 h-8 rounded-lg border-2 border-gray-300 cursor-pointer hover:border-primary transition-colors shrink-0 mt-1">
+                                    <input type="checkbox" class="activity-checkbox hidden" data-activity="3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary hidden check-icon"></i>
+                                </label>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Step 3</span>
+                                        <span class="text-gray-400 text-sm">~10 min</span>
+                                    </div>
+                                    <h3 class="font-bold text-dark text-lg">Track Your Progress</h3>
+                                    <p class="text-gray-600 mt-1">Record your completion time for each level. Note the number of attempts per level. Identify which strategies worked best.</p>
+                                    <div class="mt-3 bg-secondary/5 rounded-lg p-4 border border-secondary/20">
+                                        <p class="text-sm font-semibold text-dark mb-2">Prepare for Homework:</p>
+                                        <ul class="text-sm text-gray-600 space-y-1">
+                                            <li>• Maze Levels 1-9 (advanced challenges)</li>
+                                            <li>• Plane Levels 1-5 (flight simulation)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+                        <i data-lucide="play-circle" class="w-7 h-7 text-primary"></i>
+                        Video Resource
+                    </h2>
+                    <div class="relative pb-[56.25%] h-0 bg-gray-900 rounded-xl overflow-hidden">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/9AsqmGTAxmY" title="Senseii Games Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-gray-600 mt-3 text-sm">Senseii Games Walkthrough</p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i data-lucide="target" class="w-5 h-5 text-primary"></i>
+                        Learning Outcomes
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Understand the importance of prompt precision</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Learn to iterate and refine your approach based on feedback</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Apply structured thinking to solve complex problems</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Build resilience through challenging gameplay</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i data-lucide="link" class="w-5 h-5 text-primary"></i>
+                        Week 2 Materials
+                    </h3>
+                    <div class="space-y-2">
+                        <a href="homework2.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+                            <i data-lucide="file-text" class="w-5 h-5 text-gray-400 group-hover:text-primary"></i>
+                            <span class="text-gray-700 group-hover:text-dark">Homework Assignment</span>
+                        </a>
+                        <a href="quiz2.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+                            <i data-lucide="help-circle" class="w-5 h-5 text-gray-400 group-hover:text-primary"></i>
+                            <span class="text-gray-700 group-hover:text-dark">Week 2 Quiz</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 border border-primary/20">
+                    <h3 class="font-bold text-dark mb-3 flex items-center gap-2">
+                        <i data-lucide="bell" class="w-5 h-5 text-primary"></i>
+                        Before Next Week
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Complete Maze Levels 1-9
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Complete Plane Levels 1-5
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Take the Week 2 Quiz
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary">→</span>
+                            Identify a business problem for Week 3
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-8 px-4 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">IoT Professional Class | Automation Workz</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const checkboxes = document.querySelectorAll('.activity-checkbox');
+        const progressRing = document.getElementById('progress-ring');
+        const progressText = document.getElementById('progress-text');
+        const circumference = 125.6;
+        const storageKey = 'week2_progress';
+
+        function loadProgress() {
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                const completed = JSON.parse(saved);
+                checkboxes.forEach(cb => {
+                    if (completed.includes(cb.dataset.activity)) {
+                        cb.checked = true;
+                        cb.parentElement.classList.add('bg-primary', 'border-primary');
+                        cb.parentElement.querySelector('.check-icon').classList.remove('hidden');
+                    }
+                });
+                updateProgress();
+            }
+        }
+
+        function saveProgress() {
+            const completed = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) completed.push(cb.dataset.activity);
+            });
+            localStorage.setItem(storageKey, JSON.stringify(completed));
+        }
+
+        function updateProgress() {
+            const total = checkboxes.length;
+            const completed = document.querySelectorAll('.activity-checkbox:checked').length;
+            const percent = Math.round((completed / total) * 100);
+            const offset = circumference - (percent / 100) * circumference;
+            
+            progressRing.style.strokeDashoffset = offset;
+            progressText.textContent = percent + '%';
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', function() {
+                const label = this.parentElement;
+                const checkIcon = label.querySelector('.check-icon');
+                
+                if (this.checked) {
+                    label.classList.add('bg-primary', 'border-primary');
+                    checkIcon.classList.remove('hidden');
+                } else {
+                    label.classList.remove('bg-primary', 'border-primary');
+                    checkIcon.classList.add('hidden');
+                }
+                
+                saveProgress();
+                updateProgress();
+            });
+        });
+
+        loadProgress();
+    </script>
+</body>
+</html>

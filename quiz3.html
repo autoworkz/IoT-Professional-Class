@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Quiz | IoT Professional Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#333144',
+                        primary: '#ff6600',
+                        secondary: '#019e7c',
+                        purple: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .ld-breadcrumbs-segments { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+        .ld-breadcrumbs-segments li { display: flex; align-items: center; font-size: 0.875rem; }
+        .ld-breadcrumbs-segments li:not(:last-child)::after { content: '>'; margin: 0 0.5rem; color: #99a1b2; }
+        .ld-breadcrumbs-segments a { color: #ff6600; text-decoration: none; }
+        .ld-breadcrumbs-segments a:hover { text-decoration: underline; }
+        .ld-breadcrumbs-segments li:last-child { color: #ff6600; border-bottom: 3px solid #ff6600; }
+        
+        .quiz-option { transition: all 0.2s ease; }
+        .quiz-option:hover { border-color: #ff6600; background-color: rgba(255,102,0,0.05); }
+        .quiz-option.selected { border-color: #ff6600; background-color: rgba(255,102,0,0.1); }
+        .quiz-option.correct { border-color: #019e7c; background-color: rgba(1,158,124,0.1); }
+        .quiz-option.incorrect { border-color: #ef4444; background-color: rgba(239,68,68,0.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-dark text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="week3.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span class="hidden sm:inline">Back to Week 3</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-2">
+                    <a href="week3.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Class</a>
+                    <a href="homework3.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Homework</a>
+                    <a href="quiz3.html" class="px-4 py-2 bg-primary text-white font-semibold rounded-lg text-sm">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-50 border-b border-gray-200 py-4 px-6">
+        <div class="max-w-6xl mx-auto">
+            <ol class="ld-breadcrumbs-segments">
+                <li><a href="https://learn.autoworkz.org/courses/iot-professional-class/">IoT Professional Class</a></li>
+                <li><a href="week3.html">Week 3 — Prompt Engineering Mastery</a></li>
+                <li><span aria-current="page">Quiz</span></li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto py-8 px-6">
+        <!-- Logo & Title Section -->
+        <div class="flex flex-col md:flex-row items-start gap-6 mb-8">
+            <div class="flex items-center gap-4">
+                <img src="https://learn.autoworkz.org/wp-content/uploads/2026/02/logo.png" alt="Automation Workz" class="w-20 h-20 rounded-xl">
+                <div>
+                    <h3 class="text-lg font-semibold text-dark">Automation Workz</h3>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mt-1">
+                        <i data-lucide="help-circle" class="w-3 h-3"></i>
+                        Quiz - 100 Points
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Week 3 Quiz</h1>
+
+        <!-- Main Title Section -->
+        <div class="bg-gradient-to-r from-dark to-purple text-white rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">Prompt Engineering Mastery</h2>
+            <p class="text-gray-300 max-w-3xl">
+                Test your knowledge of the RCTFC framework, AI tool selection, and prompt engineering best practices. 10 questions worth 10 points each.
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-400">Score:</span>
+                    <span id="current-score" class="text-2xl font-bold text-primary">0</span>
+                    <span class="text-gray-400">/ 100</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Form -->
+        <div id="quiz-container" class="space-y-6">
+            <!-- Q1 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">1</span>
+                    <span>What does RCTFC stand for in prompt engineering?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="a" class="w-4 h-4 text-primary">
+                        <span>Research, Create, Test, Format, Confirm</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="b" class="w-4 h-4 text-primary">
+                        <span>Role, Context, Task, Format, Constraints</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="c" class="w-4 h-4 text-primary">
+                        <span>Request, Clarify, Transform, Finalize, Check</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4 text-primary">
+                        <span>Review, Construct, Target, Focus, Complete</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">2</span>
+                    <span>Which AI tool is best for getting cited sources?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="a" class="w-4 h-4 text-primary">
+                        <span>ChatGPT</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="b" class="w-4 h-4 text-primary">
+                        <span>Claude</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="c" class="w-4 h-4 text-primary">
+                        <span>Perplexity</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4 text-primary">
+                        <span>They all provide the same citation quality</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">3</span>
+                    <span>What is the "Role" component in the RCTFC framework?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="a" class="w-4 h-4 text-primary">
+                        <span>The persona or expertise you want AI to adopt</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="b" class="w-4 h-4 text-primary">
+                        <span>Your job title in the organization</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="c" class="w-4 h-4 text-primary">
+                        <span>The type of AI model you're using</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4 text-primary">
+                        <span>The target audience for the output</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">4</span>
+                    <span>Why is iteration important in prompt engineering?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="a" class="w-4 h-4 text-primary">
+                        <span>It makes the AI work harder</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="b" class="w-4 h-4 text-primary">
+                        <span>Great prompts rarely happen on the first try</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="c" class="w-4 h-4 text-primary">
+                        <span>AI needs multiple attempts to understand you</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4 text-primary">
+                        <span>Iteration is not actually important</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">5</span>
+                    <span>Which of the following is an example of a "Constraint"?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="a" class="w-4 h-4 text-primary">
+                        <span>"Write in a friendly tone"</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="b" class="w-4 h-4 text-primary">
+                        <span>"You are a marketing expert"</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="c" class="w-4 h-4 text-primary">
+                        <span>"Don't mention competitors or use the word 'delicious'"</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4 text-primary">
+                        <span>"I run a small bakery"</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">6</span>
+                    <span>What is a "Prompt Library"?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="a" class="w-4 h-4 text-primary">
+                        <span>A personal collection of reusable prompts organized by category</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="b" class="w-4 h-4 text-primary">
+                        <span>A database of AI-generated content</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="c" class="w-4 h-4 text-primary">
+                        <span>A list of books about AI</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="d" class="w-4 h-4 text-primary">
+                        <span>A subscription service for AI tools</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">7</span>
+                    <span>How does your OCEAN personality profile connect to prompt engineering?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="a" class="w-4 h-4 text-primary">
+                        <span>It determines which AI tool you should use</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="b" class="w-4 h-4 text-primary">
+                        <span>Personality affects communication style and output preferences</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="c" class="w-4 h-4 text-primary">
+                        <span>AI tools only work for certain personality types</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="d" class="w-4 h-4 text-primary">
+                        <span>There is no connection between OCEAN and prompting</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">8</span>
+                    <span>Which AI tool is best for nuanced reasoning and longer context?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="a" class="w-4 h-4 text-primary">
+                        <span>ChatGPT</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="b" class="w-4 h-4 text-primary">
+                        <span>Claude</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="c" class="w-4 h-4 text-primary">
+                        <span>Perplexity</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="d" class="w-4 h-4 text-primary">
+                        <span>All are equally good at reasoning</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q9 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">9</span>
+                    <span>What is the main difference between vague and precise prompts?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="a" class="w-4 h-4 text-primary">
+                        <span>Vague prompts lack context, specificity, and clear expectations</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="b" class="w-4 h-4 text-primary">
+                        <span>Vague prompts are always shorter than precise prompts</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="c" class="w-4 h-4 text-primary">
+                        <span>Precise prompts can only be used with ChatGPT</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="d" class="w-4 h-4 text-primary">
+                        <span>There is no meaningful difference</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">10</span>
+                    <span>Why should you test your prompts on multiple AI platforms?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="a" class="w-4 h-4 text-primary">
+                        <span>To find which one is the cheapest</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="b" class="w-4 h-4 text-primary">
+                        <span>Because one platform might be down</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="c" class="w-4 h-4 text-primary">
+                        <span>Different AIs have different strengths—find the best tool for your need</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="d" class="w-4 h-4 text-primary">
+                        <span>You should always stick to one platform for consistency</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center gap-4 pt-4">
+                <button onclick="submitQuiz()" class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-orange-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    Submit Quiz
+                </button>
+                <button onclick="resetQuiz()" class="px-8 py-3 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 transition-colors">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden mt-8">
+            <div class="bg-white border-2 rounded-xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-dark mb-2">Quiz Results</h3>
+                <p class="text-5xl font-bold mb-4"><span id="final-score" class="text-primary">0</span>/100</p>
+                <p id="results-message" class="text-gray-600"></p>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 pt-8 border-t border-gray-200">
+            <a href="homework3.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                Back to Homework
+            </a>
+            <a href="week3.html" class="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                Review Class Activities
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">IoT Professional Class | Automation Workz</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function submitQuiz() {
+            const questions = document.querySelectorAll('.quiz-question');
+            let score = 0;
+
+            questions.forEach((question, index) => {
+                const correct = question.dataset.correct;
+                const selected = question.querySelector(`input[name="q${index + 1}"]:checked`);
+                const options = question.querySelectorAll('.quiz-option');
+
+                options.forEach(opt => {
+                    opt.classList.remove('correct', 'incorrect');
+                });
+
+                if (selected) {
+                    const selectedOpt = selected.closest('.quiz-option');
+                    if (selected.value === correct) {
+                        score += 10;
+                        selectedOpt.classList.add('correct');
+                    } else {
+                        selectedOpt.classList.add('incorrect');
+                        const correctOpt = question.querySelector(`input[value="${correct}"]`).closest('.quiz-option');
+                        correctOpt.classList.add('correct');
+                    }
+                } else {
+                    const correctOpt = question.querySelector(`input[value="${correct}"]`).closest('.quiz-option');
+                    correctOpt.classList.add('correct');
+                }
+            });
+
+            document.getElementById('current-score').textContent = score;
+            document.getElementById('final-score').textContent = score;
+            
+            const results = document.getElementById('results');
+            results.classList.remove('hidden');
+            results.querySelector('div').className = 'bg-white border-2 rounded-xl p-8 text-center ' + 
+                (score >= 80 ? 'border-secondary' : score >= 60 ? 'border-yellow-500' : 'border-red-500');
+            
+            const message = score >= 80 ? 'Excellent work! You have a strong understanding of prompt engineering.' :
+                           score >= 60 ? 'Good job! Review the missed questions to strengthen your understanding.' :
+                           'Keep practicing! Review the class materials and try again.';
+            document.getElementById('results-message').textContent = message;
+
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.checked = false;
+            });
+            document.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+            });
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('current-score').textContent = '0';
+        }
+    </script>
+</body>
+</html>

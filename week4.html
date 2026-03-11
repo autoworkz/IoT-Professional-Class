@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 In Class | IoT Professional Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#333144',
+                        primary: '#ff6600',
+                        secondary: '#019e7c',
+                        purple: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .ld-breadcrumbs-segments { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+        .ld-breadcrumbs-segments li { display: flex; align-items: center; font-size: 0.875rem; }
+        .ld-breadcrumbs-segments li:not(:last-child)::after { content: '>'; margin: 0 0.5rem; color: #99a1b2; }
+        .ld-breadcrumbs-segments a { color: #ff6600; text-decoration: none; }
+        .ld-breadcrumbs-segments a:hover { text-decoration: underline; }
+        .ld-breadcrumbs-segments li:last-child { color: #ff6600; border-bottom: 3px solid #ff6600; }
+        
+        .activity-step { transition: all 0.3s ease; }
+        .activity-step:hover { background-color: rgba(255,102,0,0.05); }
+        .activity-step input[type="checkbox"]:checked + .step-content .step-title { text-decoration: line-through; color: #019e7c; }
+        
+        .progress-ring { transform: rotate(-90deg); }
+        .progress-ring-circle { transition: stroke-dashoffset 0.5s ease; }
+        
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-dark text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span class="hidden sm:inline">Back to Course</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-2">
+                    <a href="week4.html" class="px-4 py-2 bg-primary text-white font-semibold rounded-lg text-sm">Class</a>
+                    <a href="homework4.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Homework</a>
+                    <a href="quiz4.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-50 border-b border-gray-200 py-4 px-6">
+        <div class="max-w-6xl mx-auto">
+            <ol class="ld-breadcrumbs-segments">
+                <li><a href="https://learn.autoworkz.org/courses/iot-professional-class/">IoT Professional Class</a></li>
+                <li><a href="#">Week 4 — AI for Business Goals</a></li>
+                <li><span aria-current="page">In Class</span></li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto py-8 px-6">
+        <!-- Logo & Title Section -->
+        <div class="flex flex-col md:flex-row items-start gap-6 mb-8">
+            <div class="flex items-center gap-4">
+                <img src="https://learn.autoworkz.org/wp-content/uploads/2026/02/logo.png" alt="Automation Workz" class="w-20 h-20 rounded-xl">
+                <div>
+                    <h3 class="text-lg font-semibold text-dark">Automation Workz</h3>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mt-1">
+                        <span class="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
+                        In-Class Active
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Week 4 In Class</h1>
+
+        <!-- Main Title Section -->
+        <div class="bg-gradient-to-r from-dark to-purple text-white rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">In-Class Assignment:</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">AI for Business Goals</h2>
+            <p class="text-lg md:text-xl text-primary font-medium mb-4">From Chaos to Clarity: Using AI to Solve Real Business Problems</p>
+            <p class="text-gray-300 max-w-3xl mb-6">
+                Identify real business problems and use AI to create practical solutions. Learn to start with the problem, not the tool, and build solutions that actually get used.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#assignment" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-orange-600 transition-colors">
+                    Start Assignment
+                    <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                </a>
+                <a href="homework4.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20">
+                    Go to Homework
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Strategic Takeaway Section -->
+        <div class="bg-gray-50 rounded-2xl p-8 mb-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-dark mb-4">Strategic Takeaway</h3>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1">
+                    <blockquote class="text-xl md:text-2xl font-medium text-dark leading-relaxed">
+                        "The best AI solution is the one that actually <span class="text-primary border-b-2 border-primary/30">gets used</span>—start with the problem, not the tool."
+                    </blockquote>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <img src="https://learn.autoworkz.org/wp-content/uploads/2026/02/feature-img.png" alt="Strategic Insight" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Steps Section -->
+        <div id="assignment" class="mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-dark flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-white text-sm">1</span>
+                    In-Class Activity Steps
+                </h3>
+                <div class="flex items-center gap-3">
+                    <span class="text-sm text-gray-500">Progress:</span>
+                    <div class="relative w-12 h-12">
+                        <svg class="progress-ring w-12 h-12">
+                            <circle cx="24" cy="24" r="20" stroke="#e5e7eb" stroke-width="4" fill="none"/>
+                            <circle id="progress-circle" class="progress-ring-circle" cx="24" cy="24" r="20" stroke="#ff6600" stroke-width="4" fill="none"
+                                stroke-dasharray="125.6" stroke-dashoffset="125.6" stroke-linecap="round"/>
+                        </svg>
+                        <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-xs font-bold text-dark">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <!-- Step 1 -->
+                <div class="activity-step bg-white border border-gray-200 rounded-xl p-4">
+                    <label class="flex items-start gap-4 cursor-pointer">
+                        <input type="checkbox" class="step-checkbox w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary mt-1" data-step="1">
+                        <div class="step-content flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-primary text-white text-xs px-2 py-0.5 rounded font-semibold">~15 min</span>
+                            </div>
+                            <h4 class="step-title font-semibold text-dark">Business Problem Identification Workshop</h4>
+                            <p class="text-gray-600 text-sm mt-1">Identify 3 pain points in your business or workplace. Select one problem that is:</p>
+                            <ul class="text-gray-600 text-sm mt-2 ml-4 space-y-1">
+                                <li>• <strong>Specific</strong> enough to solve</li>
+                                <li>• <strong>Important</strong> enough to matter</li>
+                                <li>• <strong>Within your control</strong> to address</li>
+                            </ul>
+                            <div class="mt-3 bg-purple/5 border border-purple/20 rounded-lg p-3 text-sm">
+                                <p class="font-semibold text-dark mb-1">Write a clear problem statement:</p>
+                                <p class="text-gray-600">"My business struggles with [specific issue] which causes [impact] and affects [stakeholders]."</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="activity-step bg-white border border-gray-200 rounded-xl p-4">
+                    <label class="flex items-start gap-4 cursor-pointer">
+                        <input type="checkbox" class="step-checkbox w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary mt-1" data-step="2">
+                        <div class="step-content flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-primary text-white text-xs px-2 py-0.5 rounded font-semibold">~25 min</span>
+                            </div>
+                            <h4 class="step-title font-semibold text-dark">RCTFC Prompt Crafting for Business</h4>
+                            <p class="text-gray-600 text-sm mt-1">Transform your problem statement into an RCTFC prompt:</p>
+                            <div class="mt-3 bg-gray-50 rounded-lg p-4 border border-gray-200 text-sm">
+                                <p class="font-semibold text-dark mb-2">Example Structure:</p>
+                                <ul class="text-gray-600 space-y-1">
+                                    <li><strong>Role:</strong> "You are a business operations consultant..."</li>
+                                    <li><strong>Context:</strong> "I run a [business type] with [specific challenge]..."</li>
+                                    <li><strong>Task:</strong> "Recommend 3 actionable solutions..."</li>
+                                    <li><strong>Format:</strong> "Present as a numbered list with pros/cons..."</li>
+                                    <li><strong>Constraints:</strong> "Solutions must cost under $500 and take less than 2 weeks..."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="activity-step bg-white border border-gray-200 rounded-xl p-4">
+                    <label class="flex items-start gap-4 cursor-pointer">
+                        <input type="checkbox" class="step-checkbox w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary mt-1" data-step="3">
+                        <div class="step-content flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-primary text-white text-xs px-2 py-0.5 rounded font-semibold">~30 min</span>
+                            </div>
+                            <h4 class="step-title font-semibold text-dark">OpenCode Demo – Build a Simple Tool</h4>
+                            <p class="text-gray-600 text-sm mt-1">Introduction to OpenCode as a coding assistant. Watch instructor demo creating a simple business tool.</p>
+                            <div class="mt-3 space-y-2">
+                                <p class="text-gray-700 text-sm font-medium">Example tools:</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-sm">Customer Follow-Up Tracker</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Inventory Calculator</span>
+                                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-sm">Task Prioritizer</span>
+                                </div>
+                            </div>
+                            <div class="mt-3 bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-yellow-800">
+                                <strong>Key Concepts:</strong>
+                                <ul class="mt-1 space-y-1">
+                                    <li>• Describe what you want in plain language</li>
+                                    <li>• Iterate on the output</li>
+                                    <li>• Test and refine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="activity-step bg-white border border-gray-200 rounded-xl p-4">
+                    <label class="flex items-start gap-4 cursor-pointer">
+                        <input type="checkbox" class="step-checkbox w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary mt-1" data-step="4">
+                        <div class="step-content flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-primary text-white text-xs px-2 py-0.5 rounded font-semibold">~20 min</span>
+                            </div>
+                            <h4 class="step-title font-semibold text-dark">Peer Review & Refinement</h4>
+                            <p class="text-gray-600 text-sm mt-1">Share your RCTFC prompt with a partner and provide feedback on clarity and completeness.</p>
+                            <div class="mt-3 bg-secondary/5 border border-secondary/20 rounded-lg p-3 text-sm">
+                                <p class="font-semibold text-dark mb-2">Review Checklist:</p>
+                                <ul class="text-gray-600 space-y-1">
+                                    <li>☐ Is the role clearly defined?</li>
+                                    <li>☐ Is there enough context?</li>
+                                    <li>☐ Is the task specific?</li>
+                                    <li>☐ Are constraints realistic?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Left Column - Tool Spotlight -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Tool Spotlight -->
+                <div class="bg-gradient-to-r from-dark to-purple text-white rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="code-2" class="w-6 h-6 text-primary"></i>
+                        <h3 class="text-lg font-bold">New Tool: OpenCode</h3>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        OpenCode is a coding assistant that helps you build simple tools and automate tasks—no programming knowledge required. Just describe what you want in plain language.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-3 py-1 rounded-lg text-sm">Generate code</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-lg text-sm">Automate tasks</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-lg text-sm">Build simple apps</span>
+                    </div>
+                </div>
+            </div>
+
+ <!-- Right Column - Sidebar -->
+            <div class="space-y-6">
+                <!-- Download Resources -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5 text-primary"></i>
+                        Download Resources
+                    </h3>
+                    <a href="Week%4-The%20RCTFC Prompting Framework worksheet.pdf" download class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+                        <i data-lucide="file-text" class="w-5 h-5 text-primary"></i>
+                        <div>
+                            <p class="font-medium text-dark">RCTFC Prompting Framework Worksheet</p>
+                            <p class="text-sm text-gray-500">PDF document</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Learning Outcomes -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i data-lucide="target" class="w-5 h-5 text-primary"></i>
+                        Learning Outcomes
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-secondary shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Identify a <strong>specific business problem</strong> worth solving</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="brain-circuit" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Apply the <strong>RCTFC Framework</strong> to business scenarios</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="code" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm">Use <strong>OpenCode</strong> to generate a simple business solution</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="scale" class="w-5 h-5 text-yellow-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700 text-sm"><strong>Evaluate AI outputs</strong> for business applicability</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Need Assistance -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-gray-500"></i>
+                        <h3 class="font-semibold text-dark">Need Assistance?</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Contact your instructor if you have questions about identifying business problems or using OpenCode.</p>
+                    <div class="bg-primary/10 border border-primary/20 rounded-lg p-4">
+                        <p class="font-semibold text-dark text-sm">Miranda Boyd</p>
+                        <a href="mailto:miranda@autoworkz.org" class="text-primary text-sm hover:underline flex items-center gap-2 mt-1">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            miranda@autoworkz.org
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Before Next Week -->
+                <div class="bg-secondary/10 border border-secondary/20 rounded-xl p-6">
+                    <h3 class="font-bold text-dark mb-3 flex items-center gap-2">
+                        <i data-lucide="bell" class="w-5 h-5 text-secondary"></i>
+                        Before Next Week
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-secondary">→</span>
+                            Complete the homework assignment
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-secondary">→</span>
+                            Take the Week 4 Quiz
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-secondary">→</span>
+                            Test your business solution
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 pt-8 border-t border-gray-200">
+            <a href="week3.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                Previous Lesson
+            </a>
+            <a href="homework4.html" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
+                Go to Homework
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">IoT Professional Class | Automation Workz</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const checkboxes = document.querySelectorAll('.step-checkbox');
+        const progressCircle = document.getElementById('progress-circle');
+        const progressPercent = document.getElementById('progress-percent');
+        const circumference = 125.6;
+        const storageKey = 'week4_progress';
+
+        function loadProgress() {
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                const completed = JSON.parse(saved);
+                checkboxes.forEach(cb => {
+                    if (completed.includes(cb.dataset.step)) {
+                        cb.checked = true;
+                    }
+                });
+                updateProgress();
+            }
+        }
+
+        function saveProgress() {
+            const completed = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) completed.push(cb.dataset.step);
+            });
+            localStorage.setItem(storageKey, JSON.stringify(completed));
+        }
+
+        function updateProgress() {
+            const total = checkboxes.length;
+            const completed = document.querySelectorAll('.step-checkbox:checked').length;
+            const percent = Math.round((completed / total) * 100);
+            const offset = circumference - (percent / 100) * circumference;
+            
+            progressCircle.style.strokeDashoffset = offset;
+            progressPercent.textContent = percent + '%';
+            
+            if (percent === 100) {
+                progressCircle.style.stroke = '#019e7c';
+            } else {
+                progressCircle.style.stroke = '#ff6600';
+            }
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', function() {
+                saveProgress();
+                updateProgress();
+            });
+        });
+
+        loadProgress();
+    </script>
+</body>
+</html>
