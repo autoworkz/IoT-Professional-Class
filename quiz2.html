@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Quiz | IoT Professional Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#333144',
+                        primary: '#ff6600',
+                        secondary: '#019e7c',
+                        purple: '#220bb1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .ld-breadcrumbs-segments { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+        .ld-breadcrumbs-segments li { display: flex; align-items: center; font-size: 0.875rem; }
+        .ld-breadcrumbs-segments li:not(:last-child)::after { content: '>'; margin: 0 0.5rem; color: #99a1b2; }
+        .ld-breadcrumbs-segments a { color: #ff6600; text-decoration: none; }
+        .ld-breadcrumbs-segments a:hover { text-decoration: underline; }
+        .ld-breadcrumbs-segments li:last-child { color: #ff6600; border-bottom: 3px solid #ff6600; }
+        
+        .quiz-option { transition: all 0.2s ease; }
+        .quiz-option:hover { border-color: #ff6600; background-color: rgba(255,102,0,0.05); }
+        .quiz-option.selected { border-color: #ff6600; background-color: rgba(255,102,0,0.1); }
+        .quiz-option.correct { border-color: #019e7c; background-color: rgba(1,158,124,0.1); }
+        .quiz-option.incorrect { border-color: #ef4444; background-color: rgba(239,68,68,0.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-dark text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="week2.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span class="hidden sm:inline">Back to Week 2</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-2">
+                    <a href="week2.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Class</a>
+                    <a href="homework2.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Homework</a>
+                    <a href="quiz2.html" class="px-4 py-2 bg-primary text-white font-semibold rounded-lg text-sm">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-50 border-b border-gray-200 py-4 px-6">
+        <div class="max-w-6xl mx-auto">
+            <ol class="ld-breadcrumbs-segments">
+                <li><a href="https://learn.autoworkz.org/courses/iot-professional-class/">IoT Professional Class</a></li>
+                <li><a href="week2.html">Week 2 — Business Vision Board</a></li>
+                <li><span aria-current="page">Quiz</span></li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto py-8 px-6">
+        <!-- Logo & Title Section -->
+        <div class="flex flex-col md:flex-row items-start gap-6 mb-8">
+            <div class="flex items-center gap-4">
+                <img src="https://learn.autoworkz.org/wp-content/uploads/2026/02/logo.png" alt="Automation Workz" class="w-20 h-20 rounded-xl">
+                <div>
+                    <h3 class="text-lg font-semibold text-dark">Automation Workz</h3>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mt-1">
+                        <i data-lucide="help-circle" class="w-3 h-3"></i>
+                        Quiz - 100 Points
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Week 2 Quiz</h1>
+
+        <!-- Main Title Section -->
+        <div class="bg-gradient-to-r from-dark to-purple text-white rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">Business Vision & Technical Assessment</h2>
+            <p class="text-gray-300 max-w-3xl">
+                Test your understanding of vision boards, goal setting, and how the SenseiiWyze and Senseii Games platforms work together for business analysis. 10 questions worth 10 points each.
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-400">Score:</span>
+                    <span id="current-score" class="text-2xl font-bold text-primary">0</span>
+                    <span class="text-gray-400">/ 100</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Form -->
+        <div id="quiz-container" class="space-y-6">
+            <!-- Q1 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">1</span>
+                    <span>What is the primary purpose of a Business Vision Board?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="a" class="w-4 h-4 text-primary">
+                        <span>To track daily expenses and revenue</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="b" class="w-4 h-4 text-primary">
+                        <span>To visually represent business goals and define success</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="c" class="w-4 h-4 text-primary">
+                        <span>To list all your competitors</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4 text-primary">
+                        <span>To create a marketing calendar</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">2</span>
+                    <span>Why are vision boards effective for business planning?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="a" class="w-4 h-4 text-primary">
+                        <span>Visual representation helps the brain process and prioritize goals more effectively</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="b" class="w-4 h-4 text-primary">
+                        <span>They are required by most investors</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="c" class="w-4 h-4 text-primary">
+                        <span>They automatically generate business plans</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4 text-primary">
+                        <span>They replace the need for financial projections</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">3</span>
+                    <span>What platform is used in Week 2 to create your Business Vision Board?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="a" class="w-4 h-4 text-primary">
+                        <span>Senseii Games</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="b" class="w-4 h-4 text-primary">
+                        <span>ChatGPT</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="c" class="w-4 h-4 text-primary">
+                        <span>SenseiiWyze</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4 text-primary">
+                        <span>Canva</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">4</span>
+                    <span>What should a clear vision board allow someone to understand?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="a" class="w-4 h-4 text-primary">
+                        <span>Your complete financial history</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="b" class="w-4 h-4 text-primary">
+                        <span>Your business direction within 30 seconds of viewing it</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="c" class="w-4 h-4 text-primary">
+                        <span>All your past business failures</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4 text-primary">
+                        <span>Your tax obligations</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">5</span>
+                    <span>What does completing 5 levels of Senseii Games help assess?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="a" class="w-4 h-4 text-primary">
+                        <span>Your current technical skills</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="b" class="w-4 h-4 text-primary">
+                        <span>Your marketing abilities</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="c" class="w-4 h-4 text-primary">
+                        <span>Your financial planning skills</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4 text-primary">
+                        <span>Your public speaking ability</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">6</span>
+                    <span>How do the Vision Board and Senseii Games activities work together?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="a" class="w-4 h-4 text-primary">
+                        <span>They are completely separate activities with no connection</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="b" class="w-4 h-4 text-primary">
+                        <span>The games score determines your vision board content</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="c" class="w-4 h-4 text-primary">
+                        <span>They provide two data points for full business analysis: where you are and where you're going</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q6" value="d" class="w-4 h-4 text-primary">
+                        <span>Only one is required for the course</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">7</span>
+                    <span>What timeframes should be included in your vision board goals?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="a" class="w-4 h-4 text-primary">
+                        <span>Only 10-year goals</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="b" class="w-4 h-4 text-primary">
+                        <span>Short-term (6 months) and long-term (1-3 years) goals</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="c" class="w-4 h-4 text-primary">
+                        <span>Only daily tasks</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q7" value="d" class="w-4 h-4 text-primary">
+                        <span>Goals should not have specific timeframes</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">8</span>
+                    <span>Why is it important to review your vision board with a partner?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="a" class="w-4 h-4 text-primary">
+                        <span>To get feedback and refine your goals for greater clarity</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="b" class="w-4 h-4 text-primary">
+                        <span>Partners must approve all vision boards</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="c" class="w-4 h-4 text-primary">
+                        <span>To compare your goals with others</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q8" value="d" class="w-4 h-4 text-primary">
+                        <span>It's not important—vision boards should be private</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q9 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">9</span>
+                    <span>What should you do with your Senseii Games results after completing the 5 levels?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="a" class="w-4 h-4 text-primary">
+                        <span>Delete them immediately</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="b" class="w-4 h-4 text-primary">
+                        <span>Share them on social media</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="c" class="w-4 h-4 text-primary">
+                        <span>Screenshot or note them for the full business analysis</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q9" value="d" class="w-4 h-4 text-primary">
+                        <span>Ignore them if the score is low</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">10</span>
+                    <span>How does a vision board help with strategic alignment?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="a" class="w-4 h-4 text-primary">
+                        <span>It automatically creates your business strategy</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="b" class="w-4 h-4 text-primary">
+                        <span>Visual goals help you check if daily actions align with your long-term vision</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="c" class="w-4 h-4 text-primary">
+                        <span>It replaces the need for a business plan</span>
+                    </label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer">
+                        <input type="radio" name="q10" value="d" class="w-4 h-4 text-primary">
+                        <span>Vision boards are only for personal use, not business strategy</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center gap-4 pt-4">
+                <button onclick="submitQuiz()" class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-orange-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    Submit Quiz
+                </button>
+                <button onclick="resetQuiz()" class="px-8 py-3 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 transition-colors">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden mt-8">
+            <div class="bg-white border-2 rounded-xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-dark mb-2">Quiz Results</h3>
+                <p class="text-5xl font-bold mb-4"><span id="final-score" class="text-primary">0</span>/100</p>
+                <p id="results-message" class="text-gray-600"></p>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 pt-8 border-t border-gray-200">
+            <a href="homework2.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                Back to Homework
+            </a>
+            <a href="week2.html" class="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                Review Class Activities
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">IoT Professional Class | Automation Workz</p>
+            <p class="text-sm text-gray-500 mt-2">© 2024 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function submitQuiz() {
+            const questions = document.querySelectorAll('.quiz-question');
+            let score = 0;
+
+            questions.forEach((question, index) => {
+                const correct = question.dataset.correct;
+                const selected = question.querySelector(`input[name="q${index + 1}"]:checked`);
+                const options = question.querySelectorAll('.quiz-option');
+
+                options.forEach(opt => {
+                    opt.classList.remove('correct', 'incorrect');
+                });
+
+                if (selected) {
+                    const selectedOpt = selected.closest('.quiz-option');
+                    if (selected.value === correct) {
+                        score += 10;
+                        selectedOpt.classList.add('correct');
+                    } else {
+                        selectedOpt.classList.add('incorrect');
+                        const correctOpt = question.querySelector(`input[value="${correct}"]`).closest('.quiz-option');
+                        correctOpt.classList.add('correct');
+                    }
+                } else {
+                    const correctOpt = question.querySelector(`input[value="${correct}"]`).closest('.quiz-option');
+                    correctOpt.classList.add('correct');
+                }
+            });
+
+            document.getElementById('current-score').textContent = score;
+            document.getElementById('final-score').textContent = score;
+            
+            const results = document.getElementById('results');
+            results.classList.remove('hidden');
+            results.querySelector('div').className = 'bg-white border-2 rounded-xl p-8 text-center ' + 
+                (score >= 80 ? 'border-secondary' : score >= 60 ? 'border-yellow-500' : 'border-red-500');
+            
+            const message = score >= 80 ? 'Excellent work! You have a strong understanding of vision boards and business goal setting.' :
+                           score >= 60 ? 'Good job! Review the missed questions to strengthen your understanding.' :
+                           'Keep practicing! Review the class materials and try again.';
+            document.getElementById('results-message').textContent = message;
+
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.checked = false;
+            });
+            document.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+            });
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('current-score').textContent = '0';
+        }
+    </script>
+</body>
+</html>
