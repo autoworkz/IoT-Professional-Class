@@ -1,122 +1,114 @@
-# WEEK THREE: Prompt Engineering Mastery
+# WEEK THREE: Financial Gap Analysis & Business Planning
 
 ## Course Information
 - **Duration**: 1.5 hours live session
-- **Theme**: Learning to Speak AI's Language
-- **Tagline**: *"Master the prompt, master the result."*
+- **Theme**: From Vision to Reality
+- **Tagline**: *"A gap analysis without financial data is just a wish list."*
 
 ---
 
 ## Strategic Takeaway
-> *"The quality of your AI output is directly proportional to the quality of your input."*
+> *"A gap analysis without financial data is just a wish list. When you connect your vision to your numbers, you create a roadmap that can actually be executed."*
 
 ---
 
 ## Learning Objectives
 By the end of Week 3, learners will be able to:
-1. Apply the RCTFC Framework to any prompt
-2. Choose the right AI for different task types
-3. Iterate and refine prompts effectively
-4. Start a personal prompt library
-5. Connect prompt style to OCEAN personality
+1. Upload and analyze financial statements (Income Statement, Balance Sheet, Cash Flow)
+2. Connect financial data to Week 2 Vision Board
+3. Identify specific gaps between current state and goals
+4. Create a Gap-to-Goal Action Plan
+5. Use autoworkz.org for financial analysis
 
 ---
 
 ## Lesson Content
 
-### The RCTFC Framework
-Every effective prompt has five components:
+### The Three Key Financial Statements
 
-| Component | Definition | Example |
-|-----------|------------|---------|
-| **R**ole | Persona or expertise to adopt | "You are a conversion copywriter" |
-| **C**ontext | Background information | "I run a small bakery targeting busy professionals" |
-| **T**ask | Specific action to perform | "Write a promotional email for our new lunch delivery service" |
-| **F**ormat | How output should be structured | "Use a friendly tone, keep it under 150 words, include a CTA" |
-| **C**onstraints | Limitations to apply | "Don't mention competitors or use the word 'delicious'" |
+| Statement | What It Shows | Key Metrics |
+|-----------|---------------|-------------|
+| **Income Statement (P&L)** | Revenue, expenses, profit/loss over time | Revenue, COGS, Gross Profit, Net Profit |
+| **Balance Sheet** | Assets, liabilities, equity at a point in time | Assets, Liabilities, Owner's Equity |
+| **Cash Flow Statement** | Money moving in and out over time | Operating, Investing, Financing activities |
 
-### The Importance of Iteration
-- Great prompts rarely happen on the first try
-- Refine, adjust, and build on AI responses
-- Each iteration should improve clarity or specificity
+### Your 4 Data Points
+- **OCEAN Profile** (Week 1) - Who you are naturally
+- **Vision Board** (Week 2) - Where you want to go
+- **Tech Readiness** (Week 2) - How ready you are for change
+- **Financial Reality** (Week 3) - Where you stand today
 
-### Context is Queen
-- More relevant context = better results
-- Your OCEAN profile is context
-- Your business goals are context
-- Your constraints are context
+### Types of Gaps to Analyze
 
-### Choosing the Right AI
+| Gap Type | Description | Example |
+|----------|-------------|---------|
+| **Revenue Gap** | Current revenue vs. target | $100K now vs. $250K goal = $150K gap |
+| **Customer Gap** | Current customers vs. ideal profile | Local customers vs. regional expansion |
+| **Resource Gap** | Available vs. needed resources | 2 employees vs. 5 needed |
+| **Time Gap** | Current vs. desired timeline | 3 years to reach goal vs. 1 year desired |
 
-| AI Tool | Best For | Strengths |
-|---------|----------|-----------|
-| **ChatGPT** | Creative writing, brainstorming, general tasks | Versatile, quick responses |
-| **Claude** | Analysis, nuanced reasoning, longer context | Thoughtful, detailed analysis |
-| **Perplexity** | Research, current events, cited sources | Citations, up-to-date info |
+### Gap-to-Goal Action Plan Structure
 
-### OCEAN and Your Communication Style
-Your personality affects how you communicate with AI:
-- **High Openness**: May prefer creative, innovative prompts
-- **High Conscientiousness**: May want structured, detailed outputs
-- **High Extraversion**: May enjoy conversational prompts
-- **High Agreeableness**: May focus on collaborative outcomes
-- **High Neuroticism**: May need more certainty in AI responses
+| Component | Description |
+|-----------|-------------|
+| **Current State** | Where you are now (from financials) |
+| **Goal State** | Where you want to be (from vision) |
+| **Gap** | The difference (measured in $, time, or resources) |
+| **Actions** | 3-5 specific steps to close each gap |
+| **Timeline** | When will each action be completed? |
 
 ---
 
 ## In-Class Activities
 
-### Activity 1: RCTFC Framework Demo (20 minutes)
-**Objective**: See the framework in action
+### Step 1: Prepare Your Financial Documents (15 minutes)
+**Objective**: Gather required financial statements
 
 **Steps**:
-1. Watch instructor demonstrate transforming a vague prompt into a powerful one
-2. Note how each component improves the output
+1. Gather your three key financial statements
+2. Ensure documents are current (within last 12 months)
+3. Have digital copies ready for upload
 
-**Example Transformation**:
-- **Before**: "Write me a marketing email"
-- **After**: "You are a conversion copywriter (Role). I run a small bakery targeting busy professionals (Context). Write a promotional email for our new lunch delivery service (Task). Use a friendly tone, keep it under 150 words, include a call-to-action button text (Format). Don't mention competitors or use the word 'delicious' (Constraints)."
+**Required Documents**:
+- Income Statement (P&L) - Revenue, expenses, profit/loss
+- Balance Sheet - Assets, liabilities, equity
+- Cash Flow Statement - Money in/out over time
 
 ---
 
-### Activity 2: Prompt Engineering Lab (30 minutes)
-**Objective**: Practice crafting RCTFC prompts
+### Step 2: Upload Financials to autoworkz.org (25 minutes)
+**Objective**: Get AI-powered financial analysis
 
 **Steps**:
-1. Use your problem from Senseii Games (Week 2)
-2. Craft a RCTFC prompt to address it
-3. Test it on all three platforms:
-   - ChatGPT
-   - Claude
-   - Perplexity
-4. Compare results
+1. Log into autoworkz.org
+2. Upload your financial documents
+3. Review the AI-generated analysis
+4. Note key metrics and insights
+
+**Note**: Your financial data is private and secure. The analysis provides insights without exposing sensitive details.
 
 ---
 
-### Activity 3: Compare & Refine (25 minutes)
-**Objective**: Analyze and improve your prompts
+### Step 3: Map Financial Reality to Your Vision (20 minutes)
+**Objective**: Connect financial data to your vision
 
-**Steps**:
-1. Analyze the three AI responses
-2. Identify which AI gave the best answer for your need
-3. Determine what made one response better
-4. Refine your prompt and run again
+**Gap Analysis Questions**:
+- **Revenue Gap**: Current revenue vs. your target?
+- **Customer Gap**: Current customers vs. ideal customer profile?
+- **Resource Gap**: Do you have the funds to hire/expand?
+- **Time Gap**: How long to reach your financial goals?
 
 ---
 
-### Activity 4: Build Your Prompt Library (15 minutes)
-**Objective**: Start your personal prompt collection
+### Step 4: Create Your Gap-to-Goal Action Plan (30 minutes)
+**Objective**: Build concrete action steps
 
-**Template Starters**:
-```
-Business: "You are a [role] helping a [business type]..."
-
-Personal: "Act as my personal [coach/advisor/assistant]..."
-
-Research: "Find and summarize [topic] with sources..."
-
-Analysis: "Analyze [data/document] and identify [patterns/insights]..."
-```
+**Plan Structure**:
+- Current State: Where you are now (from financials)
+- Goal State: Where you want to be (from vision)
+- Gap: The difference (measured in $, time, or resources)
+- Actions: 3-5 specific steps to close each gap
+- Timeline: When will each action be completed?
 
 ---
 
@@ -128,32 +120,49 @@ Analysis: "Analyze [data/document] and identify [patterns/insights]..."
 
 ---
 
-### Part 1: Strategic AI Thinking (50 points)
-**Choose ONE question, 3-5 sentences**:
+### Part 1: Document Your Financial Reality (40 points)
 
-**Question A**: Think about a decision you made recently. How might AI have helped you make it faster, with more confidence, or with better data?
-
-**Question B**: What's one area where you spend too much time on repetitive tasks? How could automation or AI reduce that burden?
+**Tasks**:
+- Upload all three financial statements to autoworkz.org
+- Document key findings:
+  - Current monthly/annual revenue
+  - Top 3 expense categories
+  - Current profit margin
+  - Cash flow status
 
 ---
 
-### Part 2: Hands-On Practice (50 points)
+### Part 2: Gap Analysis Worksheet (30 points)
 
-**Task 1**:
-- Go to ChatGPT, Copilot, or Gemini
-- Enter: *"Help me write a 3-step checklist to improve customer follow-up in my business."*
-- Copy/screenshot the result
+Complete the gap analysis table for each vision element:
 
-**Task 2**:
-- Think about your home or workplace
-- Name one automated system you interact with regularly (e.g., smart thermostat, auto-reply email)
-- Answer: How does this system save you time or improve accuracy?
+| Vision Element | Current State | Goal State | Gap |
+|----------------|---------------|------------|-----|
+| Revenue | $____/year | $____/year | $____ gap |
+| Customer Type | Current customers | Ideal customers | Describe gap |
+| Product/Service | Current offerings | New/expansion | Describe gap |
+| Geography | Current markets | New markets | Describe gap |
+| Team/Salary | Current team/budget | Needed team/comp | Describe gap |
+
+---
+
+### Part 3: Action Plan - Top 3 Gaps (30 points)
+
+For your top 3 gaps, answer:
+- What specific actions will close this gap?
+- What resources (money, time, people) are needed?
+- What is your timeline for completion?
+- How will you measure success?
+
+**Use AI to help**: Copy your gap analysis into ChatGPT, Claude, or Perplexity and ask: "Based on my gap analysis, suggest 3-5 specific action steps to close each gap with realistic timelines."
 
 ---
 
 ### Submission Requirements
 - Format: Word doc, Google Doc, or PDF
-- Length: 1 page max
+- Length: 2 pages max
+- Include all 3 parts completed
+- Screenshots of autoworkz.org analysis (optional but recommended)
 
 ---
 
@@ -163,16 +172,16 @@ Analysis: "Analyze [data/document] and identify [patterns/insights]..."
 
 | Q# | Question | Correct Answer |
 |----|----------|----------------|
-| 1 | What does RCTFC stand for? | Role, Context, Task, Format, Constraints |
-| 2 | Which AI is best for cited sources? | Perplexity |
-| 3 | What is the "Role" component? | The persona or expertise you want AI to adopt |
-| 4 | Why is iteration important? | Great prompts rarely happen on the first try |
-| 5 | What is an example of a "Constraint"? | "Don't mention competitors or use the word 'delicious'" |
-| 6 | What is a "Prompt Library"? | A personal collection of reusable prompts by category |
-| 7 | What is the connection between OCEAN and prompts? | Personality affects communication style and output preferences |
-| 8 | Which AI is best for nuanced reasoning? | Claude |
-| 9 | What is the difference between vague and precise prompts? | Vague prompts lack context, specificity, and clear expectations |
-| 10 | Why should you test on multiple platforms? | Different AIs have different strengths—find the best tool |
+| 1 | What are the three key financial statements? | Income Statement, Balance Sheet, Cash Flow Statement |
+| 2 | What does an Income Statement show? | Revenue, expenses, profit/loss over a period of time |
+| 3 | What is the purpose of a Gap Analysis? | Identify difference between current state and goal state |
+| 4 | What does a Balance Sheet show? | Assets, liabilities, equity at a specific point in time |
+| 5 | What is a "Revenue Gap"? | The difference between current revenue and target revenue |
+| 6 | What should a Gap-to-Goal Action Plan include? | Current state, goal state, gap, actions, timeline |
+| 7 | How do Week 2 data points connect to financial analysis? | They provide context for what gaps to prioritize |
+| 8 | What does a Cash Flow Statement track? | Money moving in and out of the business over time |
+| 9 | Why is it important to measure gaps in specific terms? | Vague goals lead to vague results—specific measurements enable actionable plans |
+| 10 | What is a "Resource Gap"? | Whether you have funds, people, or equipment needed to reach goals |
 
 ---
 
@@ -180,25 +189,34 @@ Analysis: "Analyze [data/document] and identify [patterns/insights]..."
 
 | Term | Definition |
 |------|------------|
-| **Prompt Engineering** | The practice of crafting effective inputs to AI systems |
-| **RCTFC Framework** | Role, Context, Task, Format, Constraints - a prompt structure |
-| **Prompt Library** | A personal collection of reusable, effective prompts |
-| **Iteration** | The process of refining and improving through repeated attempts |
-| **AI Personas** | Defined roles or expertise levels given to AI for better outputs |
+| **Income Statement** | Financial report showing revenue, expenses, and profit/loss over a period |
+| **Balance Sheet** | Financial snapshot showing assets, liabilities, and equity at a point in time |
+| **Cash Flow Statement** | Report tracking money moving in and out of a business |
+| **Gap Analysis** | Process of comparing current state to goal state to identify differences |
+| **Gap-to-Goal Action Plan** | Structured plan with specific steps to close identified gaps |
+| **Revenue Gap** | Difference between current revenue and target revenue |
+| **Resource Gap** | Difference between available resources and needed resources |
 
 ---
 
 ## Resources
 
 ### Required Materials
-- Executive Prompts guide
-- Access to ChatGPT, Claude, Perplexity
+- Financial statements (Income Statement, Balance Sheet, Cash Flow)
+- Week 2 Vision Board
+- Access to autoworkz.org
 
-### Coding Tool Spotlight
-- **OpenCode & Claude Code**: These tools help automate repetitive tasks
-- Build simple apps and custom AI workflows
-- No programming required—just describe what you want!
-- Deeper dive in Weeks 4-6
+### AI Tools
+- ChatGPT, Claude, or Perplexity for action planning assistance
+
+---
+
+## Senseii Coaching Alignment
+
+Week 3 aligns with **Stage 3: Vision & Goal Alignment** and **Stage 4: Strengths-Based Action & Skill Development**
+
+- Vision & Goal Alignment: Connecting financial reality to vision
+- Action & Skill Development: Creating concrete action plans
 
 ---
 
@@ -206,5 +224,5 @@ Analysis: "Analyze [data/document] and identify [patterns/insights]..."
 
 **Week 4**: AI for Business Goals
 - Theme: Solving Real Business Problems with AI
-- Focus: Applying RCTFC to business scenarios
+- Focus: Applying RCTFC Framework to business scenarios
 - Tool: OpenCode

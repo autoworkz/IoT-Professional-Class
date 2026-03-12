@@ -95,7 +95,7 @@ These principles guide the design of quizzes, homework, and participation activi
 |------|-------|------------|
 | 1 | Data, AI & You | Personal Data Exploration for Business Intelligence |
 | 2 | Senseii Games Challenge | Problem-Solving & Resilience through Gamification |
-| 3 | Prompt Engineering Mastery | RCTFC Framework, AI Tool Selection |
+| 3 | Financial Gap Analysis | Business Planning with Financial Data |
 | 4 | AI for Business Goals | Business Problem Solving with OpenCode |
 | 5 | AI for Marketing Forecasting | Predictive Models from Excel Data |
 | 6 | Automation & Workflows | Building AI-Powered Automations |
