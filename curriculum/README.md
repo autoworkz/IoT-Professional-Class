@@ -8,7 +8,7 @@ Complete weekly curriculum materials for the AI Whisperer Professional Course.
 |------|-------|------|
 | 1 | Data, AI & You | [week-01.md](weeks/week-01.md) |
 | 2 | Senseii Games Challenge | [week-02.md](weeks/week-02.md) |
-| 3 | Prompt Engineering Mastery | [week-03.md](weeks/week-03.md) |
+| 3 | Financial Gap Analysis & Business Planning | [week-03.md](weeks/week-03.md) |
 | 4 | AI for Business Goals | [week-04.md](weeks/week-04.md) |
 | 5 | AI for Marketing Forecasting | [week-05.md](weeks/week-05.md) |
 | 6 | Automation & Workflows | [week-06.md](weeks/week-06.md) |
@@ -29,7 +29,7 @@ Complete weekly curriculum materials for the AI Whisperer Professional Course.
 ### Foundation Weeks (1-3)
 - [Week 1: Data, AI & You](weeks/week-01.md) - OCEAN personality assessment
 - [Week 2: Senseii Games Challenge](weeks/week-02.md) - Problem-solving through gamification
-- [Week 3: Prompt Engineering Mastery](weeks/week-03.md) - RCTFC Framework
+- [Week 3: Financial Gap Analysis & Business Planning](weeks/week-03.md) - Connect financial data to vision
 
 ### Application Weeks (4-6)
 - [Week 4: AI for Business Goals](weeks/week-04.md) - Business problem solving

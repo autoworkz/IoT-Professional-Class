@@ -8,7 +8,7 @@ Live site: **https://autoworkz.github.io/IoT-Professional-Class/**
 
 ## Quick Links
 
-### Week 3: Prompt Engineering Mastery
+### Week 3: Financial Gap Analysis & Business Planning
 - [Class Activities](https://autoworkz.github.io/IoT-Professional-Class/week3.html)
 - [Homework](https://autoworkz.github.io/IoT-Professional-Class/homework3.html)
 - [Quiz](https://autoworkz.github.io/IoT-Professional-Class/quiz3.html)

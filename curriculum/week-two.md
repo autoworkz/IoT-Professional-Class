@@ -186,7 +186,7 @@ Master the flight simulation levels.
 
 ## Next Week Preview
 
-**Week 3**: Prompt Engineering Mastery
-- Theme: Learning to Speak AI's Language
-- Focus: RCTFC Framework for effective AI communication
-- Tools: ChatGPT, Claude, Perplexity
+**Week 3**: Financial Gap Analysis & Business Planning
+- Theme: From Vision to Reality
+- Focus: Connect financial data to your business vision
+- Tools: autoworkz.org
