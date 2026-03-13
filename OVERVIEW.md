@@ -96,7 +96,7 @@ These principles guide the design of quizzes, homework, and participation activi
 | 1 | Data, AI & You | Personal Data Exploration for Business Intelligence |
 | 2 | Senseii Games Challenge | Problem-Solving & Resilience through Gamification |
 | 3 | Financial Gap Analysis | Business Planning with Financial Data |
-| 4 | AI for Business Goals | Business Problem Solving with OpenCode |
+| 4 | Marketing & Sales Planning | Build Marketing Strategies from Gap Analysis |
 | 5 | AI for Marketing Forecasting | Predictive Models from Excel Data |
 | 6 | Automation & Workflows | Building AI-Powered Automations |
 | 7 | Final Project Development | Capstone Project Work |

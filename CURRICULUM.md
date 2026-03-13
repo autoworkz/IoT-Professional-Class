@@ -46,7 +46,7 @@ These principles guide the design of all assessments and activities:
 | 1 | Data, AI & You | Personal data exploration for business intelligence through OCEAN personality assessment | Recognize behavioral data as core input to BI; Understand AI interpretation of human data; See practical applications in leadership & operations; Build confidence with AI-powered decision tools | SenseiiWyze |
 | 2 | Senseii Games Challenge | Problem-solving and resilience development through gamified maze and flight simulation challenges | Understand importance of prompt precision; Learn to iterate and refine based on feedback; Apply structured thinking to complex problems; Build resilience through challenging gameplay | Senseii Games |
 | 3 | Financial Gap Analysis | Connecting financial data to business vision for actionable planning | Apply gap analysis to financial statements; Create Gap-to-Goal Action Plans; Connect Week 2 data points to financial reality; Use AI to analyze financial health | autoworkz.org |
-| 4 | AI for Business Goals | Identify and solve real business problems using AI | Identify a specific business problem worth solving; Apply RCTFC Framework to business scenarios; Use OpenCode to generate simple business solutions; Evaluate AI outputs for business applicability | OpenCode |
+| 4 | Marketing & Sales Planning | Build marketing strategies and sales plans from gap analysis | Build marketing & sales plan based on gap analysis; Define target customer profile; Set pricing strategy aligned with financial goals; Create 90-day action plan with milestones | ChatGPT/Claude |
 | 5 | AI for Marketing Forecasting | Use existing Excel data with AI to create predictive marketing models | Prepare Excel data for AI analysis; Use AI to identify trends and patterns; Generate predictive forecasts for marketing decisions; Translate data insights into actionable strategies | Excel + ChatGPT/Claude |
 | 6 | Automation & Workflows | Build AI-powered automations to eliminate repetitive tasks | Identify repetitive tasks suitable for automation; Design simple automation workflows; Use OpenCode to generate automation scripts; Test and troubleshoot automated workflows | OpenCode |
 | 7 | Final Project Development | Apply all learned skills to build a complete AI-powered solution | Define capstone project scope; Apply all learned frameworks; Build complete AI-powered solution; Prepare final presentation | All tools |
@@ -328,70 +328,87 @@ For your top 3 gaps:
 
 ---
 
-# WEEK 4: AI for Business Goals
+# WEEK 4: Marketing & Sales Planning
 
-## Theme: Solving Real Business Problems with AI
+## Theme: From Gap Analysis to Action Plan
 
-**Tagline**: *"From Chaos to Clarity: Using AI to Solve Real Business Problems"*
+**Tagline**: *"Marketing and sales succeed when you know your customer, price for value, and execute with clear timelines."*
 
 ### Strategic Takeaway
-> *"The best AI solution is the one that actually gets used—start with the problem, not the tool."*
+> *"Marketing and sales succeed when you know your customer, price for value, and execute with clear timelines."*
 
 ---
 
 ### Learning Outcomes
 By the end of Week 4, learners will be able to:
-1. Identify a specific business problem worth solving
-2. Apply the RCTFC Framework to business scenarios
-3. Use OpenCode to generate a simple business solution
-4. Evaluate AI outputs for business applicability
+1. Build a marketing & sales plan based on gap analysis
+2. Define a target customer profile with demographics and behaviors
+3. Set a pricing strategy aligned with financial goals
+4. Create a 90-day action plan with clear milestones
 
 ---
 
 ### In-Class Activities
 
-#### Activity 1: Business Problem Identification Workshop (~15 min)
-- Identify 3 pain points in your business or workplace
-- Select one problem that is:
-  - Specific enough to solve
-  - Important enough to matter
-  - Within your control to address
-- Write a clear problem statement
+#### Step 1: Review Your Week 3 Gap Analysis (~15 min)
+- Open your Week 3 Gap-to-Goal Action Plan
+- Identify the key gaps:
+  - Revenue gap – How much more do you need to earn?
+  - Customer gap – How many more customers do you need?
+  - Product/service gap – What offerings need improvement?
+  - Geography gap – Where are your ideal customers?
+  - Team gap – Who do you need to help you grow?
+- Key Question: "Which gap, if closed, would have the biggest impact in the next 90 days?"
 
-#### Activity 2: RCTFC Prompt Crafting for Business (~25 min)
-- Transform your problem statement into an RCTFC prompt
-- Example structure:
-  - **Role**: "You are a business operations consultant..."
-  - **Context**: "I run a [business type] with [specific challenge]..."
-  - **Task**: "Recommend 3 actionable solutions..."
-  - **Format**: "Present as a numbered list with pros/cons..."
-  - **Constraints**: "Solutions must cost under $500 and take less than 2 weeks to implement..."
+#### Step 2: Create Your Marketing & Sales Plan with AI (~25 min)
+- Use AI with RCTFC prompts to build your marketing strategy
+- Example RCTFC Prompt:
+  - **Role**: "You are a marketing strategist for small businesses..."
+  - **Context**: "My business is [type]. I need to close a $[X] revenue gap by acquiring [Y] new customers..."
+  - **Task**: "Create a 90-day marketing plan with 3-5 specific channels..."
+  - **Format**: "Present as a table with channel, budget, timeline, and expected results..."
+  - **Constraints**: "Budget under $[X], must reach [target audience]..."
 
-#### Activity 3: OpenCode Demo – Build a Simple Tool (~30 min)
-- Introduction to OpenCode as a coding assistant
-- Watch instructor demo: Creating a simple business tool (e.g., customer follow-up tracker, inventory calculator)
-- Key concepts:
-  - Describe what you want in plain language
-  - Iterate on the output
-  - Test and refine
+#### Step 3: Define Your Target Customer Profile (~20 min)
+- Create a detailed profile of your ideal customer:
+  - Demographics: Age, income, location, industry
+  - Behaviors: Where they spend time, how they buy
+  - Pain Points: What problems do they have?
+  - Values: What matters most to them?
+  - Buying Triggers: What motivates them to purchase?
+- Key Questions:
+  - Who has the problem my business solves?
+  - Where do they spend time online and offline?
+  - What motivates them to buy?
 
-#### Activity 4: Peer Review & Refinement (~20 min)
-- Share your RCTFC prompt with a partner
-- Provide feedback on clarity and completeness
-- Refine your prompt based on feedback
+#### Step 4: Set Your Pricing Strategy (~20 min)
+- Use your financial data from Week 3 to set strategic prices:
+  - Cost to deliver (from Week 3 financials)
+  - Competitor pricing
+  - Value delivered to customer
+  - Revenue gap to close
+  - Market positioning (premium/competitive/budget)
+
+#### Step 5: Create Your 90-Day Action Plan (~20 min)
+- Build a specific, time-bound action plan with milestones:
+  - Week 1-2: Foundation activities
+  - Week 3-4: Launch first campaign
+  - Month 2: Scale what works
+  - Month 3: Evaluate and adjust
+- Success Metrics: Define how you will measure success (leads, conversions, revenue, customer acquisition cost)
 
 ---
 
 ### Homework Assignment
 
-#### Task: Business Problem Solved (100 points)
-1. **Define** one specific business problem (1-2 sentences)
-2. **Craft** an RCTFC prompt to address it
-3. **Execute** the prompt in your chosen AI tool
-4. **Document** the AI's response
-5. **Reflect**: What worked? What would you change?
+#### Task: Marketing & Sales Action Plan (100 points)
+1. **Review** your Week 3 Gap Analysis (revenue, customer, product, geography gaps)
+2. **Define** your Target Customer Profile (demographics, behaviors, pain points, values, buying triggers)
+3. **Develop** your Marketing Strategy (3-5 channels, key messages, budget, metrics)
+4. **Set** your Pricing Strategy (costs, competitor pricing, value, final price)
+5. **Create** your 90-Day Action Plan (timeline with specific actions and success metrics)
 
-**Submission Requirements**: Word doc, Google Doc, or PDF (1 page max)
+**Submission Requirements**: Word doc, Google Doc, or PDF (2 pages max)
 
 ---
 
@@ -399,16 +416,16 @@ By the end of Week 4, learners will be able to:
 
 | Q# | Topic | Correct Answer |
 |----|-------|----------------|
-| 1 | First step in problem-solving | Clearly define the problem before seeking solutions |
-| 2 | Good problem statement criteria | Specific, important, and within your control |
-| 3 | RCTFC for business vs. personal | Business prompts focus on ROI, efficiency, and stakeholders |
-| 4 | OpenCode primary purpose | Generate code and automate tasks without programming knowledge |
-| 5 | Why iterate on AI outputs | First responses rarely match exact needs—refinement improves quality |
-| 6 | Peer review benefit | External feedback identifies blind spots and improves clarity |
-| 7 | Evaluating AI solutions | Consider feasibility, cost, time, and alignment with goals |
-| 8 | Common mistake in business AI use | Starting with the tool instead of the problem |
-| 9 | Role of context in business prompts | Provides AI with industry, size, constraints, and goals specific to your situation |
-| 10 | Measuring solution success | Does it solve the problem? Is it implementable? Does it save time/money? |
+| 1 | Foundation for marketing plan | Your Week 3 Gap-to-Goal Action Plan and financial data |
+| 2 | NOT one of the five key gaps | Technology gap |
+| 3 | Target Customer Profile elements | Demographics, behaviors, pain points, values, and buying triggers |
+| 4 | Pricing strategy factors | Cost to deliver, competitor pricing, value to customer, and revenue gap |
+| 5 | 90-day plan structure | Foundation, launch, scale, and evaluate phases across the 90 days |
+| 6 | Key question for prioritizing gaps | Which gap would have the biggest impact in the next 90 days? |
+| 7 | Success metrics to track | Leads, conversions, revenue, and customer acquisition cost |
+| 8 | How AI helps with marketing | Generate channel recommendations, messaging, and budget allocation based on gap analysis |
+| 9 | What is a buying trigger | What motivates a customer to make a purchase decision |
+| 10 | Where to upload financial documents | autoworkz.org |
 
 ---
 
