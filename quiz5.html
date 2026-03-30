@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Quiz | IoT Professional Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { dark: '#333144', primary: '#ff6600', secondary: '#019e7c', purple: '#220bb1' }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .ld-breadcrumbs-segments { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+        .ld-breadcrumbs-segments li { display: flex; align-items: center; font-size: 0.875rem; }
+        .ld-breadcrumbs-segments li:not(:last-child)::after { content: '>'; margin: 0 0.5rem; color: #99a1b2; }
+        .ld-breadcrumbs-segments a { color: #ff6600; text-decoration: none; }
+        .ld-breadcrumbs-segments li:last-child { color: #ff6600; border-bottom: 3px solid #ff6600; }
+        .quiz-option { transition: all 0.2s ease; cursor: pointer; }
+        .quiz-option:hover { border-color: #ff6600; background-color: rgba(255,102,0,0.05); }
+        .quiz-option.correct { border-color: #019e7c; background-color: rgba(1,158,124,0.1); }
+        .quiz-option.incorrect { border-color: #ef4444; background-color: rgba(239,68,68,0.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <header class="bg-dark text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="week5.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span class="hidden sm:inline">Back to Week 5</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-2">
+                    <a href="week5.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Class</a>
+                    <a href="homework5.html" class="px-4 py-2 bg-white/10 text-white font-semibold rounded-lg text-sm hover:bg-white/20 transition-colors">Homework</a>
+                    <a href="quiz5.html" class="px-4 py-2 bg-primary text-white font-semibold rounded-lg text-sm">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="bg-gray-50 border-b border-gray-200 py-4 px-6">
+        <div class="max-w-6xl mx-auto">
+            <ol class="ld-breadcrumbs-segments">
+                <li><a href="https://learn.autoworkz.org/courses/iot-professional-class/">IoT Professional Class</a></li>
+                <li><a href="week5.html">Week 5 - AI for Marketing Forecasting</a></li>
+                <li><span aria-current="page">Quiz</span></li>
+            </ol>
+        </div>
+    </div>
+    <main class="max-w-6xl mx-auto py-8 px-6">
+        <div class="flex flex-col md:flex-row items-start gap-6 mb-8">
+            <div class="flex items-center gap-4">
+                <img src="https://learn.autoworkz.org/wp-content/uploads/2026/02/logo.png" alt="Automation Workz" class="w-20 h-20 rounded-xl">
+                <div>
+                    <h3 class="text-lg font-semibold text-dark">Automation Workz</h3>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mt-1">
+                        <i data-lucide="help-circle" class="w-3 h-3"></i>
+                        Quiz - 100 Points
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Week 5 Quiz</h1>
+        <div class="bg-gradient-to-r from-dark to-purple text-white rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">AI for Marketing Forecasting</h2>
+            <p class="text-gray-300 max-w-3xl">Test your knowledge on data preparation, AI forecasting, trend analysis, and turning forecasts into actionable marketing decisions.</p>
+            <div class="flex items-center gap-4 mt-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-400">Score:</span>
+                    <span id="current-score" class="text-2xl font-bold text-primary">0</span>
+                    <span class="text-gray-400">/ 100</span>
+                </div>
+            </div>
+        </div>
+        <div id="quiz-container" class="space-y-6">
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">1</span>
+                    <span>What is the first step in preparing data for AI forecasting?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q1" value="a" class="w-4 h-4 text-primary"><span>Upload to AI</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q1" value="b" class="w-4 h-4 text-primary"><span>Clean and format the data</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q1" value="c" class="w-4 h-4 text-primary"><span>Write the prompt</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q1" value="d" class="w-4 h-4 text-primary"><span>Review results</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">2</span>
+                    <span>What does RCTFC stand for in AI prompting?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q2" value="a" class="w-4 h-4 text-primary"><span>Role, Context, Task, Format, Constraints</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q2" value="b" class="w-4 h-4 text-primary"><span>Read, Calculate, Think, Forecast, Compare</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q2" value="c" class="w-4 h-4 text-primary"><span>Research, Collect, Test, Finalize, Check</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q2" value="d" class="w-4 h-4 text-primary"><span>Results, Context, Time, Frequency, Cost</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">3</span>
+                    <span>Which date format is recommended for AI data analysis?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q3" value="a" class="w-4 h-4 text-primary"><span>DD-MM-YYYY</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q3" value="b" class="w-4 h-4 text-primary"><span>YYYY-MM-DD</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q3" value="c" class="w-4 h-4 text-primary"><span>MM/DD/YYYY</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q3" value="d" class="w-4 h-4 text-primary"><span>Month Day, Year</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="d">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">4</span>
+                    <span>What type of business data is most useful for forecasting?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q4" value="a" class="w-4 h-4 text-primary"><span>Sales records only</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q4" value="b" class="w-4 h-4 text-primary"><span>Customer lists only</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q4" value="c" class="w-4 h-4 text-primary"><span>Marketing campaign results only</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q4" value="d" class="w-4 h-4 text-primary"><span>All of the above (sales, customers, marketing, analytics)</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">5</span>
+                    <span>In the RCTFC prompt structure, what should you include in the Context section?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q5" value="a" class="w-4 h-4 text-primary"><span>Your business type and time period of data</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q5" value="b" class="w-4 h-4 text-primary"><span>The exact numbers you want to see</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q5" value="c" class="w-4 h-4 text-primary"><span>Your personal opinions</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q5" value="d" class="w-4 h-4 text-primary"><span>Technical jargon</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="b">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">6</span>
+                    <span>What is the main benefit of using AI for marketing forecasting?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q6" value="a" class="w-4 h-4 text-primary"><span>It replaces all human decision-making</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q6" value="b" class="w-4 h-4 text-primary"><span>It helps identify patterns you might miss</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q6" value="c" class="w-4 h-4 text-primary"><span>It guarantees future success</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q6" value="d" class="w-4 h-4 text-primary"><span>It eliminates the need for data</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">7</span>
+                    <span>When AI provides a forecast, what additional information should you ask for?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q7" value="a" class="w-4 h-4 text-primary"><span>Confidence level and risk factors</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q7" value="b" class="w-4 h-4 text-primary"><span>The AI model name</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q7" value="c" class="w-4 h-4 text-primary"><span>Historical data</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q7" value="d" class="w-4 h-4 text-primary"><span>Competitor information</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="c">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">8</span>
+                    <span>What should you do after receiving an AI forecast?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q8" value="a" class="w-4 h-4 text-primary"><span>Implement every suggestion immediately</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q8" value="b" class="w-4 h-4 text-primary"><span>Ignore it and trust your intuition</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q8" value="c" class="w-4 h-4 text-primary"><span>Identify specific, actionable marketing decisions</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q8" value="d" class="w-4 h-4 text-primary"><span>Delete your data</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shrink-0">9</span>
+                    <span>True or False: AI forecasting works best with clean, well-formatted data.</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q9" value="a" class="w-4 h-4 text-primary"><span>True</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q9" value="b" class="w-4 h-4 text-primary"><span>False</span></label>
+                </div>
+            </div>
+            <div class="quiz-question bg-white border border-gray-200 rounded-xl p-6 border-l-4 border-primary" data-correct="a">
+                <h3 class="font-bold text-dark mb-4 flex items-start gap-3">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold shrink-0">10</span>
+                    <span>SUMMING IT UP: What is the key takeaway from Week 5 about data and AI?</span>
+                </h3>
+                <div class="space-y-2 ml-11">
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q10" value="a" class="w-4 h-4 text-primary"><span>Understanding past patterns through AI helps predict future success</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q10" value="b" class="w-4 h-4 text-primary"><span>Data is only useful for large corporations</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q10" value="c" class="w-4 h-4 text-primary"><span>AI can replace all marketing decisions</span></label>
+                    <label class="quiz-option flex items-center gap-3 p-3 rounded-lg border border-gray-200"><input type="radio" name="q10" value="d" class="w-4 h-4 text-primary"><span>You need expensive software to do forecasting</span></label>
+                </div>
+            </div>
+            <div class="flex justify-center gap-4 pt-4">
+                <button onclick="submitQuiz()" class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-orange-600 transition-colors flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5"></i>Submit Quiz</button>
+                <button onclick="resetQuiz()" class="px-8 py-3 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 transition-colors">Reset</button>
+            </div>
+        </div>
+        <div id="results" class="hidden mt-8">
+            <div class="bg-white border-2 rounded-xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-dark mb-2">Quiz Results</h3>
+                <p class="text-5xl font-bold mb-4"><span id="final-score" class="text-primary">0</span>/100</p>
+                <p id="results-message" class="text-gray-600"></p>
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 pt-8 border-t border-gray-200">
+            <a href="homework5.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors"><i data-lucide="arrow-left" class="w-5 h-5"></i>Back to Homework</a>
+            <a href="week5.html" class="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">Review Class Activities<i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+        </div>
+    </main>
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">IoT Professional Class | Automation Workz</p>
+            <p class="text-sm text-gray-500 mt-2">2026 Automation Workz. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+        function submitQuiz() {
+            const questions = document.querySelectorAll('.quiz-question');
+            let score = 0;
+            questions.forEach((question, index) => {
+                const correct = question.dataset.correct;
+                const selected = question.querySelector('input[name="q' + (index + 1) + '"]:checked');
+                const options = question.querySelectorAll('.quiz-option');
+                options.forEach(opt => { opt.classList.remove('correct', 'incorrect'); });
+                if (selected) {
+                    const selectedOpt = selected.closest('.quiz-option');
+                    if (selected.value === correct) {
+                        score += 10;
+                        selectedOpt.classList.add('correct');
+                    } else {
+                        selectedOpt.classList.add('incorrect');
+                        const correctOpt = question.querySelector('input[value="' + correct + '"]').closest('.quiz-option');
+                        correctOpt.classList.add('correct');
+                    }
+                } else {
+                    const correctOpt = question.querySelector('input[value="' + correct + '"]').closest('.quiz-option');
+                    correctOpt.classList.add('correct');
+                }
+            });
+            document.getElementById('current-score').textContent = score;
+            document.getElementById('final-score').textContent = score;
+            const results = document.getElementById('results');
+            results.classList.remove('hidden');
+            results.querySelector('div').className = 'bg-white border-2 rounded-xl p-8 text-center ' + (score >= 80 ? 'border-secondary' : score >= 60 ? 'border-yellow-500' : 'border-red-500');
+            const message = score >= 80 ? 'Excellent work! You understand AI forecasting fundamentals.' : score >= 60 ? 'Good job! Review the missed questions to strengthen your understanding.' : 'Keep practicing! Review the class materials and try again.';
+            document.getElementById('results-message').textContent = message;
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+        function resetQuiz() {
+            document.querySelectorAll('input[type="radio"]').forEach(input => { input.checked = false; });
+            document.querySelectorAll('.quiz-option').forEach(opt => { opt.classList.remove('correct', 'incorrect'); });
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('current-score').textContent = '0';
+        }
+    </script>
+</body>
+</html>
