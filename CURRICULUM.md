@@ -47,7 +47,7 @@ These principles guide the design of all assessments and activities:
 | 2 | Senseii Games Challenge | Problem-solving and resilience development through gamified maze and flight simulation challenges | Understand importance of prompt precision; Learn to iterate and refine based on feedback; Apply structured thinking to complex problems; Build resilience through challenging gameplay | Senseii Games |
 | 3 | Financial Gap Analysis | Connecting financial data to business vision for actionable planning | Apply gap analysis to financial statements; Create Gap-to-Goal Action Plans; Connect Week 2 data points to financial reality; Use AI to analyze financial health | autoworkz.org |
 | 4 | Marketing & Sales Planning | Build marketing strategies and sales plans from gap analysis | Build marketing & sales plan based on gap analysis; Define target customer profile; Set pricing strategy aligned with financial goals; Create 90-day action plan with milestones | ChatGPT/Claude |
-| 5 | AI for Marketing Forecasting | Use existing Excel data with AI to create predictive marketing models | Prepare Excel data for AI analysis; Use AI to identify trends and patterns; Generate predictive forecasts for marketing decisions; Translate data insights into actionable strategies | Excel + ChatGPT/Claude |
+| 5 | AI for Marketing Forecasting | Use existing Excel data with AI to create predictive marketing models | Prepare Excel data for AI analysis; Use AI to identify trends and patterns; Generate 90-day forecasts for leads, conversions, revenue; Define success metrics | Excel + ChatGPT/Claude |
 | 6 | Automation & Workflows | Build AI-powered automations to eliminate repetitive tasks | Identify repetitive tasks suitable for automation; Design simple automation workflows; Use OpenCode to generate automation scripts; Test and troubleshoot automated workflows | OpenCode |
 | 7 | Final Project Development | Apply all learned skills to build a complete AI-powered solution | Define capstone project scope; Apply all learned frameworks; Build complete AI-powered solution; Prepare final presentation | All tools |
 | 8 | Final Presentations | Present capstone project and preview advanced AI concepts | Present capstone project to audience; Articulate AI problem-solving approach; Receive and incorporate feedback; Preview Agent Swarms and advanced concepts | Agent Swarms preview |
@@ -433,7 +433,7 @@ By the end of Week 4, learners will be able to:
 
 ## Theme: Your Data Has a Story
 
-**Tagline**: *"Your Data Has a Story: Using AI to Predict What's Next"*
+**Tagline**: *"Using AI to Predict What's Next"*
 
 ### Strategic Takeaway
 > *"The best predictor of future success is understanding your past patterns—AI helps you see what you've been missing."*
@@ -444,77 +444,77 @@ By the end of Week 4, learners will be able to:
 By the end of Week 5, learners will be able to:
 1. Prepare Excel data for AI analysis
 2. Use AI to identify trends and patterns in existing business data
-3. Generate predictive forecasts for marketing decisions
-4. Translate data insights into actionable marketing strategies
+3. Generate 90-day forecasts for leads, conversions, and revenue
+4. Define success metrics for your marketing plan
+
+---
+
+### Documents
+- **In-Class Activities**: `documents/Week5_InClassActivities.docx`
+- **Homework**: `documents/Homework5.docx` (includes required AI prompt)
+- **Quiz**: `documents/Quiz5.docx`
 
 ---
 
 ### In-Class Activities
 
-#### Activity 1: Data Audit – What Data Do You Have? (~15 min)
-- Inventory your existing business data:
-  - Sales records
-  - Customer lists
+#### Activity 1: Data Preparation Workshop (40 min)
+- Inventory your existing business data sources:
+  - Sales records and revenue data
+  - Customer lists and contact information
   - Marketing campaign results
-  - Website/social media analytics
-- Identify which data is most relevant for forecasting
-
-#### Activity 2: Export & Prep – Formatting Excel for AI (~20 min)
-- Export data from your systems (CRM, POS, spreadsheets)
-- Clean and format for AI analysis:
+  - Website and social media analytics
+- Export and format your data for AI analysis:
   - Remove duplicates and errors
-  - Ensure consistent date formats
+  - Ensure consistent date formats (MM/DD/YYYY)
   - Label columns clearly
   - Create a summary sheet with key metrics
-- Best practices for data structure
+  - Save as .xlsx file for upload
 
-#### Activity 3: AI Forecasting Lab – Upload, Analyze, Predict (~35 min)
+#### Activity 2: AI Forecasting Lab (50 min)
 - Upload your Excel file to ChatGPT or Claude
-- Prompt structure for forecasting:
-  - **Role**: "You are a marketing analytics expert..."
-  - **Context**: "This is [business type] data from [time period]..."
-  - **Task**: "Analyze trends and forecast [metric] for the next 3 months..."
-  - **Format**: "Provide a summary of trends, a 3-month forecast, and confidence level..."
-  - **Constraints**: "Focus on [specific product/service/segment]..."
-- Document the AI's analysis
-
-#### Activity 4: Strategy Translation – From Forecast to Action (~20 min)
-- Review AI-generated insights
-- Identify 3 actionable marketing decisions based on the forecast:
-  - What to increase
-  - What to decrease
-  - What to test
-- Share one insight with the class
+- Use the RCTFC prompt structure:
+  - **Role**: "You are a marketing analytics expert specializing in small business forecasting."
+  - **Context**: "This is data from [your business type] covering [time period]."
+  - **Task**: "Analyze trends and forecast [leads/conversions/revenue] for the next 90 days."
+  - **Format**: "Provide a trend summary, 90-day forecast with numbers, and confidence level."
+  - **Constraints**: "Focus on [specific product/service/segment]."
+- Document your AI-generated insights
+- Identify 3 actionable marketing decisions based on the forecast
 
 ---
 
-### Homework Assignment
+### Homework Assignment (100 points)
 
-#### Task: Marketing Forecast Report (100 points)
-1. **Prepare**: Export and clean your own Excel data (sales, marketing, or customer data)
-2. **Analyze**: Use AI to identify trends and patterns
-3. **Forecast**: Generate a 3-month prediction for one key metric
-4. **Act**: List 3 specific marketing actions based on your forecast
-5. **Reflect**: What surprised you? What will you do differently?
+**See `documents/Homework5.docx` for complete instructions and the required AI prompt.**
 
-**Submission Requirements**: Word doc, Google Doc, or PDF with screenshots (1-2 pages max)
+| Task | Points |
+|------|--------|
+| Prepare Your Data | 20 |
+| Run the AI Forecast Prompt | 30 |
+| Action Plan | 30 |
+| Reflection | 20 |
+
+**Submission Requirements**: Word doc, Google Doc, or PDF (2-3 pages)
 
 ---
 
 ### Week 5 Quiz (100 Points)
 
+**See `documents/Quiz5.docx` for the complete quiz.**
+
 | Q# | Topic | Correct Answer |
 |----|-------|----------------|
-| 1 | First step in data preparation | Audit what data you have and ensure it's clean |
-| 2 | Excel formatting best practice | Consistent date formats, clear column labels, no duplicates |
-| 3 | What AI can do with spreadsheets | Identify patterns, generate forecasts, answer questions about data |
-| 4 | Role of context in data prompts | Explains business type, time period, and what you want to predict |
-| 5 | Confidence level in forecasts | AI's estimate of how reliable the prediction is |
-| 6 | Why forecasting matters | Helps allocate resources, plan campaigns, and reduce uncertainty |
-| 7 | Common data mistake | Using incomplete, outdated, or messy data |
-| 8 | Turning forecast into action | Identify specific decisions to increase, decrease, or test |
-| 9 | Limitations of AI forecasting | AI predicts based on past patterns—external factors may change outcomes |
-| 10 | Best data for marketing forecasts | Historical sales, campaign results, customer behavior over time |
+| 1 | First step in data preparation | Clean and format the data |
+| 2 | RCTFC stands for | Role, Context, Task, Format, Constraints |
+| 3 | Recommended date format | MM/DD/YYYY |
+| 4 | Most useful data for forecasting | All: sales, customers, marketing, analytics |
+| 5 | Context section should include | Your business type and time period of data |
+| 6 | Main benefit of AI forecasting | Helps identify patterns you might miss |
+| 7 | What to ask after receiving forecast | Confidence level and risk factors |
+| 8 | What to do after receiving forecast | Identify specific, actionable marketing decisions |
+| 9 | AI forecasting works best with | Clean, well-formatted data (True) |
+| 10 | **Key Takeaway** | Understanding past patterns through AI helps predict future success |
 
 ---
 
